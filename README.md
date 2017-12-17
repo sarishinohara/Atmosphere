@@ -8,7 +8,7 @@ About
 
 Atmosphere-O is a custom stylesheet for deviantart.
 
-A custom stylesheet (or userstyles) a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
+A custom stylesheet (or userstyles) is a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
 
 
 Instruction
@@ -50,7 +50,7 @@ I use several fonts for my custom stylesheet.
 Trivia
 -------------------------------
 
-I decided to name the script Atmosphere-O because they're a lot of different things you can find here from amazing painting, lewd arts, realistic drawing to cute things, thus Atmosphere. The O comes from Ozone, which you can find in the atmosphere, but I put this because it sounds cool to be honest, and to differentiate it with my previous dA script called Atmosphere.
+I decided to name the script <i>Atmosphere-O</i> because they're a lot of different things you can find here from amazing painting, lewd arts, realistic drawing to cute things, thus Atmosphere. The <i>O</i> comes from Ozone, which you can find in the atmosphere, but I put this because it sounds cool to be honest, and to differentiate it with my previous dA script called <i>Atmosphere</i>.
 
 
 Report
