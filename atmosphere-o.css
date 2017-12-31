@@ -1,4 +1,4 @@
-@-moz-document domain(deviantart.com) {
+@-moz-document domain("deviantart.com") {
 /* GENERAL */
 /** DESCRIPTION : set the main font and change others elements **/
         * {
@@ -15,7 +15,7 @@
             transition: all 0.3s ease-in-out !important;
         }
         a:hover {
-            background: transparent !important;
+            background: transparent;
             opacity: .7 !important;
         }
         html body,
@@ -80,9 +80,12 @@
             text-shadow: none !important;
             text-transform: uppercase !important;        
         }
+        .dev-page-view .dev-title-container a.report-deviation-link.top-report-link,
         #oh-menu-upgrade,
+		#overhead-promo,
         #depths.superslim div.footer_links,
-        #deviantART-v7 footer#depths .depths-inner {
+        #deviantART-v7 footer#depths .depths-inner,
+		.gogo-upsell {
             display: none !important;
         }
 
@@ -597,6 +600,7 @@
         }
         #master-editbutton {
             background: #FACA9B !important;
+            line-height: 24px !important;
             padding-bottom: 6px !important;
             margin-right: 10px !important;
         }
@@ -621,6 +625,7 @@
         }
         .gmbutton2.gmbutton2qn2r[href*="note"] {
             background: #F4998A !important;  
+            line-height: 26px !important;
         }
         .gmbutton2.gmbutton2qn2r[href*="give"] {
             background: #9684A3 !important;  
@@ -629,6 +634,7 @@
         .gmbutton2.gmbutton2qn2r[href*="give"] img {
             filter: brightness(0) invert(1) !important;  
             margin-left: 4px !important;
+            padding-bottom: 2px !important;
         }
         .blues-bar-ctrl {
             /*** ARTIST INFORMATION HEADER ***/
@@ -705,6 +711,7 @@
             /*** BOXES TOP ***/
             background: #FFF !important;
             border: 1px solid rgba(190, 190, 190, .4) !important;
+            border-bottom: 1px solid rgba(190, 190, 190, .6) !important;
             border-radius: 1px !important;
             padding: 15px !important;
             margin-bottom: -1px !important;
@@ -871,7 +878,6 @@
             /*** ABOUT BOX ***/
             background: #212121 !important;
             box-shadow: 0 28px 16px -26px rgba(0, 0, 0, .3);
-            height: auto !important;
             padding: 0px 0px 15px 0px !important;
             margin-bottom: 30px !important;
             width: 250px !important;
@@ -894,12 +900,23 @@
         }
         #aboutme-interests {
             background-color: #FFF;
-            border-radius: 2px !important;
+            border: 1px solid rgba(190, 190, 190, .8) !important;
+            border-radius: 1px !important;
             padding: 10px !important;
         }
         #aboutme-interests * {
             font-size: 10.5pt !important;
         }
+		#aboutme-interests-button {
+    		margin-top: -4px !important;
+		}
+		#aboutme-interests-button span i {
+ 		    background: no-repeat url("https://i.imgur.com/OygFMxF.png") center !important;
+  		    background-size: cover !important;
+  		    width: 10px !important;
+  		    height: 10px !important;
+   		    margin-top: 5px !important;
+		 }
         .feed-action-list {
             /*** ACTIVITY BOX ***/
             background: #D8E1E8 !important;
@@ -909,6 +926,7 @@
         }
         .feed-action {
             background: #FFF !important;
+            border: 1px solid rgba(190, 190, 190, .8) !important;
             border-radius: 1px !important;
             box-shadow: none !important;
         }
@@ -1035,8 +1053,8 @@
             text-align: left;
         }
         .feed-action .feed-action-deviation-buttons > div.button {
-            background: #34495E !important;
-            border-color: #34495E !important;
+            background: #34495E;
+            border-color: transparent;
             border-radius: 2px !important;
             color: #FFF !important;
         }
@@ -1046,7 +1064,7 @@
         .feed-action .feed-action-deviation-buttons #fave-btn-wrap ul#favesnav {
             background: #BED9DE !important;
             border-left: 0px solid #d4decf;
-            height: 93% !important;
+            height: 94% !important;
         }
         .feed-action .feed-action-deviation-buttons #fave-btn-wrap ul#favesnav a.favesnav-downlink div.favesnav-downarrow {
             background: #BED9DE !important;
@@ -1054,6 +1072,15 @@
             box-shadow: none !important;
             color: #FFF !important;       
         }
+		.feed-action .feed-action-deviation-buttons > .fave:hover {
+  			background: #FEC606 !important;
+		}
+		.feed-action .feed-action-deviation-buttons > .mlt:hover {
+  			background: #EB6361 !important;
+		}
+		.feed-action .feed-action-deviation-buttons > .share:hover {
+  			background: #3D8EB9 !important;
+		}
         #dv7 ul.list li.a, 
         body.gruze ul.list li.a,
         body.gruze div.gr-box div.gr-body table.grf tr:nth-child(2n) {
@@ -1332,14 +1359,14 @@
         .gruze-sidebar.left-sidebar .browse a i {
             /*** ALL ICON ***/
             background: no-repeat url("https://i.imgur.com/seZMtRv.png");
-            background-position: center left !important;
+            background-position: left center !important;
             background-size: 19px auto !important;
             margin-left: 3px !important;
         }
         .gruze-sidebar.left-sidebar .scraps a i {
             /*** SCRAPS ICON ***/
             background: no-repeat url("https://i.imgur.com/tuF5qKD.png");
-            background-position: center left !important;
+            background-position: left center !important;
             background-size: 18px auto !important;
             margin-left: 3px !important;
         }
@@ -1525,7 +1552,7 @@
         .wrapper .left-sidebar .featured a i {
             /*** FEATURED ICON ***/
             background: no-repeat url("https://i.imgur.com/HpRZUpM.png");
-            background-position: center left !important;
+            background-position: left center !important;
             background-size: 22px auto !important;
             margin-top: 2px !important;
             margin-left: 1px !important;
@@ -1533,7 +1560,7 @@
         .wrapper .left-sidebar  .browse a i {
             /*** ALL ICON ***/
             background: no-repeat url("https://i.imgur.com/seZMtRv.png");
-            background-position: center left !important;
+            background-position: left center !important;
             background-size: 19px auto !important;
             margin-top: 1px !important;
             margin-left: 3px !important;
@@ -1632,7 +1659,7 @@
         }
         .dev-page-button.remove-message-button {
             /*** REMOVE BUTTON ***/
-            background-color: #81E2E6 !important; 
+            background-color: #60646D !important; 
         }
         .dev-page-button.dev-page-button-with-text.dev-page-download {
             /*** DOWNLOAD BUTTON ***/
@@ -2025,6 +2052,9 @@
         .dev-page-view .dev-description .text-ctrl {
             border-top: none !important;
         }
+        .mature-tag.followed-by-report-button {
+            display: none !important;
+        }
         .dev-page-view .dev-description .text.block * {
             font-family: "Roboto" !important;
         }
@@ -2072,7 +2102,7 @@
         }
         .dd-container .gr-body {
             background: #FFF !important;
-            border-color: transparent;
+            border: 1px solid #E7E7E7 !important;
         }
         .pp.dd-content * {
             font-size: 10pt !important;
@@ -2247,13 +2277,14 @@
             font-size: 11pt !important;
         }
         .smbutton.smbutton-big span {
-            /** PREVIEW **/
             font-size: 10.5pt !important;
         }
         .smbutton-pale > span {
             border: none !important;
         }
-
+		.smbutton.smbutton-pale.smbutton-big.preview {
+ 		    padding: 2px 10px !important;
+		}
         .smbutton.smbutton-green.smbutton-big.comment-submit {
             /** SUBMIT **/
             border: none !important;
@@ -2309,12 +2340,12 @@
         .ccomment a.reply {
             /** REPLY BUTTON **/
             background-image: none !important;
-            background-color: #D8E2EC !important;
-            border: 1px solid rgba(190, 190, 190, .4) !important;
+            background-color: transparent !important;
+            border-top: 1px dashed rgba(190, 190, 190, .4) !important;
             border-radius: 0px !important;
             color: #444 !important;
             font-family: "Roboto" !important;
-            font-size: 10pt !important;
+            font-size: 10.5pt !important;
             font-stretch: condensed !important;
             font-weight: bold !important;
             letter-spacing: 0.5px !important;
@@ -2326,7 +2357,7 @@
             transition: all 0.3s ease-in-out !important;
         }
         .ccomment a.reply:hover {
-            color: #F0F0F0 !important;
+            color: #7E7E7E !important;
             transition: all 0.3s ease-in-out !important;
         }
         .gmbutton2 b {
@@ -3074,7 +3105,7 @@
         h2.mczone-title {
             /*** NOTIFICATIONS BOXES TITLE ***/
             background: #FFF !important;
-            border-bottom: none !important;
+            border-bottom: 1px solid rgba(190, 190, 190, .8) !important;
             color: #557780 !important;
             font-family: "Roboto" !important;
             font-size: 16pt !important;
@@ -3084,6 +3115,9 @@
             padding: 15px 25px !important;
             text-transform: uppercase !important;
         }
+		.mczone-title[style="margin-right: -1px;"] {
+   			margin-right: 0px !important;
+		}
         h2.mczone-title i.mm {
             display: none !important;
         }
@@ -4448,7 +4482,9 @@
             font-size: 10pt !important;
         }
         .forum_content  #gmi-CCommentMaster .c,
-        .main-content  #gmi-CCommentMaster .c {
+        .main-content  #gmi-CCommentMaster .c,
+        .main-comment  #gmi-CCommentMaster .c,
+		.mods-column-ll #gmi-GMFrame_Gruser #gmi-CCommentMaster .c {
             /*** FORUM THREAD COMMENTS ***/
             display: none !important;
         }
@@ -4658,9 +4694,7 @@
         }
 }
 
-@-moz-document url("https://www.deviantart.com/users/rockedout"),
-regexp("https://www.deviantart.com/users/login\?.*"),
-regexp("https://www.deviantart.com/users/wrong-password?.*") {
+@-moz-document url("https://www.deviantart.com/users/rockedout"), regexp("https://www.deviantart.com/users/login\\?.*"), regexp("https://www.deviantart.com/users/wrong-password?.*") {
 /* LOGIN */
 /** DESCRIPTION : change the elements of the login page **/
         html,
@@ -4880,5 +4914,17 @@ regexp("https://www.deviantart.com/users/wrong-password?.*") {
             position: absolute !important;
             top: 0px !important;
             left: 20px !important;
-        }   
+        }
+}
+
+@-moz-document regexp("https://.*deviantart.com/status/.*") {
+		.feed-action-list {
+			background: transparent !important;																																	border: none !important;
+		}	
+		body.gruze #output #deviant div.catbar {
+			margin-top: 41px !important;
+		}
+		#gmi-GPage .feed-action-list #gmi-GMFrame_Gruser {
+			margin-top: 180px !important;
+		}
 }
