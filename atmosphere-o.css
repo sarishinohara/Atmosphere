@@ -23,11 +23,11 @@
         #deviant,
         #deviant .gruze-main,
         .dev-page-container.bubbleview,
+        body.chatroom div.bubbleview, 
         div.messages,
         #output,
         #dv7,
         .bubbleview,
-        body.chatroom div.bubbleview, 
         .alt0,
         .discoverytag_container {
             background: #ECEEF1 !important;
