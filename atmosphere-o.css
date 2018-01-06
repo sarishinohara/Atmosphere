@@ -1584,7 +1584,9 @@
 	}
 
 	body.gruze div.gr-box div.gr-body table.grf tr:nth-child(2n+1) td span,
-	body.gruze div.gr-box div.gr-body table.grf tr:nth-child(2n) td span,.gr-body .grf-indent li.f,.grf-deviants * {
+	body.gruze div.gr-box div.gr-body table.grf tr:nth-child(2n) td span,.gr-body .grf-indent li.f,
+	.grf-indent .f.grf *,
+	.grf-deviants * {
 		font-size: 12pt !important;
 		font-stretch: condensed;
 	}
