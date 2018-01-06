@@ -1,6 +1,6 @@
 # Atmosphere-O
 
-![screenshot](https://a.pomf.cat/yflkbh.png)
+![screenshot](https://s1.gifyu.com/images/Screenshot-1234.png)
 Preview of Atmosphere-O.
 
 About
