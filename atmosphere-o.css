@@ -2125,6 +2125,11 @@
 		margin-left: 15px !important;
 	}
 
+	.folderview div.folderview-art {
+    		margin-top: -10px !important;
+    		margin-left: -27px !important;
+	}
+	
 	#deviant .folderview.extra-padding-hack {
 		padding-left: 0px !important;
 		margin-left: -10px !important;
