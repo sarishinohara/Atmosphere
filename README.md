@@ -31,7 +31,12 @@ Instruction
 <li> Or <a href="https://pastebin.com/r3bqsuuv">manually</a> : create a new style in Stylish and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
 </ol>
 
-<strong>Step 3 : Install the font </strong>
+<strong>Step 3 : install others scripts </strong>
+<ol>
+<li><a href="https://greasyfork.org/en/scripts/37087-deviantart-navigation-onscroll-default-avatar">DeviantArt Navigation onScroll + Default avatar</a></li>
+</ol>
+
+<strong>Step 4 : Install the font </strong>
 
 I use several fonts for my custom stylesheet.
 <ol>
@@ -40,7 +45,7 @@ I use several fonts for my custom stylesheet.
 <li> <a href="http://www.freejapanesefont.com/bokutachi-gothic-2-bold/">Bokutachi no Gothic 2 </a></li>
 </ol>
 
-<strong>Step 4 : Show your appreciation </strong>
+<strong>Step 5 : Show your appreciation </strong>
 <ol>
 <li>Feel free to comment this deviation (critique, suggestion, compliment, etc).</li>
 <li>If you like my works, don't hesitate to watch me.</li>
