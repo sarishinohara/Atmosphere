@@ -1,12 +1,15 @@
 # Atmosphere-O
 
-![screenshot](https://s1.gifyu.com/images/Screenshot-1234.png)
-Preview of Atmosphere-O.
+![screenshot](https://s1.gifyu.com/images/Screenshot-1274.png)
+
+![screenshot](https://s1.gifyu.com/images/Screenshot-1275.png)
+
+Preview of <i>Atmosphere-O</i>.
 
 About
 -------------------------------
 
-Atmosphere-O is a custom stylesheet for deviantart.
+<i>Atmosphere-O</i> is a custom stylesheet for </i>Deviantart</i>.
 
 A custom stylesheet (or userstyles) is a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
 
