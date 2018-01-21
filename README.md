@@ -55,12 +55,6 @@ I use several fonts for my custom stylesheet.
 <li>You can share it, but don't forget to mention me.</li>
 </ol>
 
-Trivia
--------------------------------
-
-I decided to name the script <i>Atmosphere-O</i> because they're a lot of different things you can find here from amazing painting, lewd arts, realistic drawing to cute things, thus Atmosphere. The <i>O</i> comes from Ozone, which you can find in the atmosphere, but I put this because it sounds cool to be honest, and to differentiate it with my previous dA script called <i>Atmosphere</i>.
-
-
 Report
 -------------------------------
 
