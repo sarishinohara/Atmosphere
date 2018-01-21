@@ -11,7 +11,7 @@ About
 
 <i>Atmosphere-O</i> is a custom stylesheet for </i>Deviantart</i>.
 
-A custom stylesheet (or userstyles) is a script with a bunch of pseudo-code that will change the aspect of any website, it's kind like make-up I guess : you'll be able to change/modify the visual of the elements of the page (background, icon, buttons, etc...) and even delete some useless stuff.
+Userstyles are CSS code designed to alter the appearance of one, some, or all sites.
 
 
 Instruction
@@ -64,4 +64,4 @@ I decided to name the script <i>Atmosphere-O</i> because they're a lot of differ
 Report
 -------------------------------
 
-This script isn't perfect, some parts of the site weren't modified such as the section in Shop or the F.A.Q section. If you find some elements that weren't tweaked or that you simply want to modify or re-add an element that was removed, don't hesitate to report it in the comments.
+Don't hesitate to report any issues you find while using this userstyle.
