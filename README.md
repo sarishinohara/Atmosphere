@@ -1,8 +1,6 @@
 # Atmosphere-O
 
-![screenshot](https://s1.gifyu.com/images/Screenshot-1274.png)
-
-![screenshot](https://s1.gifyu.com/images/Screenshot-1275.png)
+<img src="preview_atmosphere-o.png" width="100%">
 
 Preview of <i>Atmosphere-O</i>.
 
