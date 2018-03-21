@@ -33,20 +33,16 @@ Instruction
 <li><b>(NEW) STYLUS ONLY</b> : Import <a href="https://mega.nz/#F!4TIBUTaK!68UQF79dszA23h5snooTRw">atmosphere-o.json</a> in Stylus by clicking the button <i>Import Styles</i>. You can change theme by clicking the gear icon next to the script name in the managment styles page.</li>
 </ol>
 
-<strong>Step 3 : install others scripts </strong>
-<ol>
-<li><a href="https://greasyfork.org/en/scripts/37087-deviantart-navigation-onscroll-default-avatar">DeviantArt Navigation onScroll + Default avatar</a></li>
-</ol>
-
-<strong>Step 4 : Install the font </strong>
+<strong>Step 3 : Install the font </strong>
 
 I use several fonts for my custom stylesheet.
 <ol>
+<li> <a href="https://www.fontsquirrel.com/fonts/bebas-neue">Bebas Neue</a></li>
 <li> <a href="http://www.freejapanesefont.com/bokutachi-gothic-2-bold/">Bokutachi no Gothic 2 </a></li>
 <li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a></li>
 </ol>
 
-<strong>Step 5 : Show your appreciation </strong>
+<strong>Step 4 : Show your appreciation </strong>
 <ol>
 <li>Feel free to comment this submission (critique, suggestion, compliment, etc).</li>
 <li>If you like my works, don't hesitate to watch me.</li>
