@@ -28,8 +28,9 @@ Instruction
 
 <strong>Step 2 : Install the script </strong>
 <ol>
-<li> Via <a href="https://userstyles.org/styles/144757/atmosphere-o-da-css">userstyles</a> : click the button <i>install Style</i> and it's done.</li>
-<li> Or <a href="https://pastebin.com/r3bqsuuv">manually</a> : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
+<li> Via userstyles (<a href="https://userstyles.org/styles/144757/atmosphere-o-light-da-css">light version</a> or <a href="https://userstyles.org/styles/157416/atmosphere-o-dark-da-css">dark version</a>) : click the button <i>install Style</i> and it's done.</li>
+<li> Or manually (<a href="https://pastebin.com/r3bqsuuv">light version</a> or <a href="https://pastebin.com/re0sBM9h">dark version</a>) : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
+<li><b>(NEW) STYLUS ONLY</b> : Import <a href="https://mega.nz/#F!4TIBUTaK!68UQF79dszA23h5snooTRw">atmosphere-o.json</a> in Stylus by clicking the button <i>Import Styles</i>. You can change theme by clicking the gear icon next to the script name in the managment styles page.</li>
 </ol>
 
 <strong>Step 3 : install others scripts </strong>
@@ -41,7 +42,6 @@ Instruction
 
 I use several fonts for my custom stylesheet.
 <ol>
-<li> <a href="https://www.fontsquirrel.com/fonts/bebas-neue">Bebas Neue</a></li>
 <li> <a href="http://www.freejapanesefont.com/bokutachi-gothic-2-bold/">Bokutachi no Gothic 2 </a></li>
 <li> <a href="https://www.fontsquirrel.com/fonts/roboto">Roboto</a></li>
 </ol>
