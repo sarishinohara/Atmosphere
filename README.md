@@ -1,6 +1,6 @@
 # Atmosphere-O
 
-<img src="preview_atmosphere-o.png" width="100%">
+<img src="preview_2_atmosphere-o.png" width="100%">
 
 Preview of <i>Atmosphere-O</i>.
 
