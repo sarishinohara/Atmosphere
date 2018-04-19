@@ -1,8 +1,8 @@
 /* ==UserStyle==
 @name           Atmosphere-O
 @namespace      https://github.com/Catgrills/Atmosphere-O
-@version        1.0.1
-@description    An userstyle for 4chan called Pygmalion-Z.
+@version        1.0.2
+@description    An userstyle for deviantArt called Atmosphere-O.
 @author         Catgrills/Katgrills
 @preprocessor 	uso
 @var select theme 'Theme' {
@@ -35,6 +35,7 @@
 
 @-moz-document domain("deviantart.com") {
 /*[[theme]]*/
+    
     /* GENERAL */
 
     /** DESCRIPTION : set the main font and change others elements **/
@@ -259,6 +260,7 @@
     #comments i.gr2,
     #comments i.gr3,
     #comments-thread-settings,
+    #depths,
     #deviantART-v7 #depths,
     #deviant .gmbutton2 .icon,
     #deviant .module-blocks .gr-top,
@@ -835,14 +837,15 @@
     /* LITTLE POPUP WINDOW */
 
     /** DESCRIPTION : change the lements in the little popped up windows **/
+
     .popup2-ccomment-manage,
     .popup2-cruiser,
     .popup2-feed-activity-menu .feed-activity-menu,
     .popup2-givemenu,
     .popup2-mczone-devwatch {
         background: var(--card-bg) !important;
-        box-shadow: none !important;
         border: 1px solid var(--border-color) !important;
+        box-shadow: none !important;
         padding: 10px !important;
     }
 
@@ -952,6 +955,277 @@
 
     .popup2.popup2-feed-activity-menu .feed-activity-menu-content .feed-item-divider {
         border-top: 1px dotted var(--border-color);
+    }
+
+    /* EDIT BOX */
+
+    /** DESCRIPTION : change the elements of the edit boxes **/
+    .gr-configbox .gr-top,
+    .gr-configbox .question-tt {
+        display: none !important;
+    }
+
+    .gr-configbox .gr-body {
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+    }
+
+    .gr-configbox .gr-body,
+    .gr-configbox .gr-body .gr {
+        background: var(--card-bg) !important;
+        border: none;
+    }
+
+    .gr-configbox .tab {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: none !important;
+        color: var(--primary-color) !important;
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+        padding: 5px 15px 7px 15px !important;
+        text-shadow: none !important;
+        margin-right: 10px !important;
+    }
+
+    .gr-configbox .tab.selected,
+    .gr-configbox .tabselect .tab.selected {
+        border: none !important;
+        color: #212121 !important;
+    }
+
+    .gr-configbox label {
+        color: var(--secondary-color);
+        font-family: "Roboto" !important;
+        font-size: 18pt !important;
+        font-stretch: condensed;
+        font-weight: normal !important;
+    }
+
+    .gr-configbox .info-whoami {
+        height: 37px !important;
+    }
+
+    .gr-configbox .who {
+        margin-top: 15px !important;
+    }
+
+    .gr-configbox #skill_level,
+    .gr-configbox #specialty {
+        background: transparent !important;
+        box-shadow: none !important;
+        height: 50px !important;
+        position: absolute !important;
+        margin-top: -7px !important;
+    }
+
+    .gr-configbox #skill_level {
+        right: 40px !important;
+    }
+
+    .gr-configbox #specialty {
+        right: 150px;
+    }
+
+    .gr-configbox .info-whoami,
+    .gr-configbox select,
+    .gr-configbox input,
+    .gr-configbox textarea {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed;
+        padding: 10px !important;
+    }
+
+    .gr-configbox .ppp select,
+    .gr-configbox .row select {
+        height: 50px !important;
+    }
+
+    #profilepic div.cropholder {
+        background: transparent !important;
+        border: none !important;
+        border-radius: 2px !important;
+    }
+
+    #profilepic div.cropholder img {
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+    }
+
+    .gr-configbox .gmbutton2,
+    .gr-configbox .smbutton.smbutton-size-default {
+        background: #3E4651 !important;
+        border: none !important;
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        color: #FFF;
+        font-family: "Roboto";
+        font-size: 16pt !important;
+        font-stretch: condensed;
+        font-weight: bold;
+        padding: 8px 20px;
+        text-transform: uppercase;
+    }
+
+    .deckuploader_container .deckuploader_buttons .deckuploader_button {
+        overflow: visible !important;
+    }
+
+    /* CUSTOMIZE */
+
+    /** DESCRIPTION : change the elements of the customize page **/
+    .zone-holder {
+        border: none !important;
+    }
+
+    #user-edit-header .ch.ch-indi {
+        background: transparent;
+        border: none !important;
+        color: var(--primary-color) !important;
+    }
+
+    #user-edit-header .ch.ch-indi * {
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 15pt;
+        font-stretch: condensed;
+    }
+
+    #user-edit-header .ch.ch-indi h3,
+    #user-edit-header .ch.ch-indi h3 span {
+        font-size: 20pt !important;
+        font-weight: normal;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+    }
+
+    #user-edit-header .ch.ch-indi .smbutton {
+        display: none;
+    }
+
+    #user-edit-header #megaclick-done,
+    #deviant .inline-catalog-holder #user-catalog-more-button {
+        background: #3E4651 !important;
+        color: #FFF !important;
+        padding-bottom: 3px;
+        display: block !important;
+    }
+
+    #user-edit-header #megaclick-done * {
+        color: #FFF !important;
+    }
+
+    .gzone-label {
+        color: var(--secondary-color);
+        font-size: 18pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        margin-bottom: 20px !important;
+        text-transform: capitalize !important;
+    }
+
+    #deviant .zone-holder #module-arrange-map .sealed-zone.ch .ch-ctrl {
+        background: var(--card-bg);
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        padding: 15px;
+    }
+
+    #deviant .zone-holder #module-arrange-map .gr-top,
+    .gm-minimized .gr-top {
+        background: transparent !important;
+        border: none;
+    }
+
+    #deviant .zone-holder #module-arrange-map .sealed-zone.ch .ch-ctrl .gr,
+    .gm-minimized .gr-top .gr {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        padding: 10px;
+    }
+
+    #deviant .zone-holder #module-arrange-map .sealed-zone.ch .ch-ctrl .gr .icon {
+        display: none;
+    }
+
+    #deviant .zone-holder #module-arrange-map .sealed-zone.ch .ch-ctrl .gr * {
+        color: var(--primary-color);
+        font-size: 15pt;
+        font-stretch: condensed;
+        font-weight: normal;
+        text-indent: 7px;
+    }
+
+    #deviant .zone-holder #module-arrange-map .gm-controls .gmb-menu a {
+        background: no-repeat url("https://i.imgur.com/OygFMxF.png") center !important;
+        background-size: 20px auto !important;
+        filter: var(--invert) !important;
+        visibility: visible !important;
+    }
+
+    #deviant .inline-catalog-holder .indizone.modalfunk {
+        background: var(--card-bg) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        width: 97% !important;
+        margin: 20px auto !important;
+    }
+
+    #deviant .inline-catalog-holder .indizone.modalfunk > div > h3,
+    #deviant .inline-catalog-holder .indizone.modalfunk > div > em {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 20pt !important;
+        font-stretch: condensed;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    #deviant .inline-catalog-holder .indizone.modalfunk .widget-categories * {
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed;
+        font-weight: normal;
+    }
+
+    #deviant .inline-catalog-holder .gm-clog i.bigicon {
+        display: none !important;
+    }
+
+    #deviant .inline-catalog-holder .gm-clog .gr {
+        height: auto !important;
+        padding-left: 20px !important;
+    }
+
+    #deviant .inline-catalog-holder .gm-minimized .gr-top .gr h2 * {
+        color: var(--primary-color) !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    #deviant .inline-catalog-holder .gm-clog .clog-only {
+        color: var(--secondary-color) !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    #deviant .inline-catalog-holder .indizone-vr,
+    #deviant .inline-catalog-holder .gm-clog .clog-only .addbutton,
+    #deviant .inline-catalog-holder .clog .viewbutton {
+        display: none;
     }
 
     /* PROFILE */
@@ -1800,6 +2074,42 @@
         text-shadow: none !important;
         text-transform: uppercase !important;
         margin-left: 10px !important;
+    }
+
+    .group-gallery-edit-controls,
+    .gallery-edit-controls {
+
+        /*** GALLERY EDITOR ***/
+        background: transparent !important;
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    .group-gallery-edit-controls h3,
+    .gallery-edit-controls h3 {
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 20pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        letter-spacing: 0px;
+        margin-bottom: 5px;
+    }
+
+    .gallery-edit-controls .smbutton.smbutton-blue {
+        background: #00B8D3 !important;
+    }
+
+    .gallery-edit-controls .smbutton.smbutton-blue span {
+        border: none !important;
+    }
+
+    #gmi-EditableResourceStream .details {
+        display: none !important;
     }
 
     .folder-title {
@@ -6016,6 +6326,107 @@
         color: var(--primary-color) !important;
     }
 
+    /* LOGIN */
+
+    /** DESCRIPTION : change the elements of the login page **/
+    #solid-gone .catbar,
+    .rockedout-fella,
+    .rockedout-page #rockedout-subtitle,
+    #login-form-container h2 {
+        display: none;
+    }
+
+    .rockedout-page #login-form-container {
+        height: 240px !important;
+        position: absolute !important;
+        top: 100px !important;
+        right: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+    }
+
+    .rockedout-page #login-form-container,
+    .login-page #login,
+    .login-page #lost-password,
+    .login-page .px-blocked {
+        background: var(--card-bg);
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        padding: 20px !important;
+    }
+
+    .login-page #login td *,
+    .rockedout-page #login-form-container table * {
+        color: var(--primary-color);
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal;
+    }
+
+    .rockedout-page #login-form-container table * {
+        font-weight: normal !important;
+    }
+
+    #login_username,
+    #login_password,
+    .rockedout-page #login-form-container table input {
+        background: var(--card-bg-2) !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        border: none !important;
+        margin-left: 10px !important;
+    }
+
+    .login-page .smbutton,
+    .rockedout-page #login-form-container table .smbutton {
+        background: #5FAC75 !important;
+        color: #FFF !important;
+        font-weight: bold !important;
+    }
+
+    .rockedout-page #forgot-container {
+        font-size: 15pt !important;
+        font-stretch: condensed;
+        position: absolute !important;
+        top: 400px !important;
+        right: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+    }
+
+    /* ERROR */
+
+    /** DESCRIPTION : change the elements of the error page **/
+
+    .error-404 #content {
+        background: no-repeat url("https://i.imgur.com/tVRfwfr.png") center;
+        background-size: cover;
+        margin-top: 100px;
+    }
+
+    .error-404 #title,
+    .error-404 #description,
+    .error-404 #other-destinations {
+        display: none;
+    }
+
+    #final-destination {
+        background: #5FAC75 !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        font-family: "Roboto" !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        text-shadow: none !important;
+        padding: 8px 20px 12px 20px !important;
+        width: auto !important;
+        text-align: center !important;
+        position: fixed !important;
+        bottom: 30px !important;
+        left: 30px !important;
+    }
+
 }
 
 @-moz-document regexp("https://.*.deviantart.com/journal/poll/.*") {
@@ -6037,3 +6448,6 @@
     }
 
 }
+
+
+   
