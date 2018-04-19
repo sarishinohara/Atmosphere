@@ -6,7 +6,7 @@
     :root {
         --body-bg: #F3F3F3 !important;
         --card-bg: #E8EDF1 !important;
-        --card-bg-2:#F8FAFB !important;
+        --card-bg-2: #F8FAFB !important;
         --border-color: #BEBEBE !important;
         --link-color: #44B39D !important;
         --primary-color: #212121 !important;
@@ -178,12 +178,20 @@
     }
 
     .talk-post-reply .cx,
+    .notesfmessage a.nmclose,
     #notes .compose_frame .gr-top .gr a.clear_note {
 
         /*** CLOSE ICON ***/
         background: url('https://imgur.com/4GlrMN7.png') no-repeat center !important;
         background-size: cover !important;
         filter: invert(1) !important;
+    }
+
+    .notesfmessage a.nmclose {
+        height: 21px !important;
+        width: 21px !important;
+        margin-top: -3px !important;
+        margin-right: 10px;
     }
 
     .searchCanceller img {
@@ -230,6 +238,7 @@
     #comments i.gr2,
     #comments i.gr3,
     #comments-thread-settings,
+    #depths,
     #deviantART-v7 #depths,
     #deviant .gmbutton2 .icon,
     #deviant .module-blocks .gr-top,
@@ -304,7 +313,7 @@
     #group .gruze-sidebar-end,
     #group .gr-bloggers,
     #group .more-journals-link,
-    .match-body-height > .guideblock:last-child:not(.shineblock),.mature-tag.followed-by-report-button,.mcbox-inner.mcbox-inner-thumb.mcbox-inner-thumb-deviation .mcb-commentcount,.messages-menu #birthday-zone,.module-blocks #gmi-GMFrame_Gruser:first-child .gr-box .grf-indent .text,#notes .current-note span.sel-arrow,#notes .mcb-note-box .note-controls,#oh-menu-upgrade > a,.page-results #gmi-GPage #headerZone,.paging-results.paging-results-first-page.browse-link-button.popup-trigger,#pointsdownload_widget .dev-page-button i,.popup2-darkspeech,.search-box-clear.search-clear,.stash-create.stash-edit,.tab .icon,.user-symbol.beta,.user-symbol.premium,.user-symbol.senior,.watch-suggestions-home.visible {
+    .match-body-height > .guideblock:last-child:not(.shineblock),.mature-tag.followed-by-report-button,.mcbox-inner.mcbox-inner-thumb.mcbox-inner-thumb-deviation .mcb-commentcount,.messages-menu #birthday-zone,.module-blocks #gmi-GMFrame_Gruser:first-child .gr-box .grf-indent .text,#notes .current-note span.sel-arrow,#notes .mcb-note-box .note-controls,.notesfmessage.notesuccess .icon,#oh-menu-upgrade > a,#oh-menu-promo,.page-results #gmi-GPage #headerZone,.paging-results.paging-results-first-page.browse-link-button.popup-trigger,#pointsdownload_widget .dev-page-button i,.popup2-darkspeech,.search-box-clear.search-clear,.stash-create.stash-edit,.tab .icon,.user-symbol.beta,.user-symbol.premium,.user-symbol.senior,.watch-suggestions-home.visible {
         display: none !important;
     }
 
@@ -806,14 +815,15 @@
     /* LITTLE POPUP WINDOW */
 
     /** DESCRIPTION : change the lements in the little popped up windows **/
+
     .popup2-ccomment-manage,
     .popup2-cruiser,
     .popup2-feed-activity-menu .feed-activity-menu,
     .popup2-givemenu,
     .popup2-mczone-devwatch {
         background: var(--card-bg) !important;
-        box-shadow: none !important;
         border: 1px solid var(--border-color) !important;
+        box-shadow: none !important;
         padding: 10px !important;
     }
 
@@ -923,6 +933,277 @@
 
     .popup2.popup2-feed-activity-menu .feed-activity-menu-content .feed-item-divider {
         border-top: 1px dotted var(--border-color);
+    }
+
+    /* EDIT BOX */
+
+    /** DESCRIPTION : change the elements of the edit boxes **/
+    .gr-configbox .gr-top,
+    .gr-configbox .question-tt {
+        display: none !important;
+    }
+
+    .gr-configbox .gr-body {
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+    }
+
+    .gr-configbox .gr-body,
+    .gr-configbox .gr-body .gr {
+        background: var(--card-bg) !important;
+        border: none;
+    }
+
+    .gr-configbox .tab {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: none !important;
+        color: var(--primary-color) !important;
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+        padding: 5px 15px 7px 15px !important;
+        text-shadow: none !important;
+        margin-right: 10px !important;
+    }
+
+    .gr-configbox .tab.selected,
+    .gr-configbox .tabselect .tab.selected {
+        border: none !important;
+        color: #212121 !important;
+    }
+
+    .gr-configbox label {
+        color: var(--secondary-color);
+        font-family: "Roboto" !important;
+        font-size: 18pt !important;
+        font-stretch: condensed;
+        font-weight: normal !important;
+    }
+
+    .gr-configbox .info-whoami {
+        height: 37px !important;
+    }
+
+    .gr-configbox .who {
+        margin-top: 15px !important;
+    }
+
+    .gr-configbox #skill_level,
+    .gr-configbox #specialty {
+        background: transparent !important;
+        box-shadow: none !important;
+        height: 50px !important;
+        position: absolute !important;
+        margin-top: -7px !important;
+    }
+
+    .gr-configbox #skill_level {
+        right: 40px !important;
+    }
+
+    .gr-configbox #specialty {
+        right: 150px;
+    }
+
+    .gr-configbox .info-whoami,
+    .gr-configbox select,
+    .gr-configbox input,
+    .gr-configbox textarea {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed;
+        padding: 10px !important;
+    }
+
+    .gr-configbox .ppp select,
+    .gr-configbox .row select {
+        height: 50px !important;
+    }
+
+    #profilepic div.cropholder {
+        background: transparent !important;
+        border: none !important;
+        border-radius: 2px !important;
+    }
+
+    #profilepic div.cropholder img {
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+    }
+
+    .gr-configbox .gmbutton2,
+    .gr-configbox .smbutton.smbutton-size-default {
+        background: #3E4651 !important;
+        border: none !important;
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        color: #FFF;
+        font-family: "Roboto";
+        font-size: 16pt !important;
+        font-stretch: condensed;
+        font-weight: bold;
+        padding: 8px 20px;
+        text-transform: uppercase;
+    }
+
+    .deckuploader_container .deckuploader_buttons .deckuploader_button {
+        overflow: visible !important;
+    }
+
+    /* CUSTOMIZE */
+
+    /** DESCRIPTION : change the elements of the customize page **/
+    .zone-holder {
+        border: none !important;
+    }
+
+    #user-edit-header .ch.ch-indi {
+        background: transparent;
+        border: none !important;
+        color: var(--primary-color) !important;
+    }
+
+    #user-edit-header .ch.ch-indi * {
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 15pt;
+        font-stretch: condensed;
+    }
+
+    #user-edit-header .ch.ch-indi h3,
+    #user-edit-header .ch.ch-indi h3 span {
+        font-size: 20pt !important;
+        font-weight: normal;
+        letter-spacing: 0px;
+        margin-bottom: 10px;
+    }
+
+    #user-edit-header .ch.ch-indi .smbutton {
+        display: none;
+    }
+
+    #user-edit-header #megaclick-done,
+    #deviant .inline-catalog-holder #user-catalog-more-button {
+        background: #3E4651 !important;
+        color: #FFF !important;
+        padding-bottom: 3px;
+        display: block !important;
+    }
+
+    #user-edit-header #megaclick-done * {
+        color: #FFF !important;
+    }
+
+    .gzone-label {
+        color: var(--secondary-color);
+        font-size: 18pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        margin-bottom: 20px !important;
+        text-transform: capitalize !important;
+    }
+
+    #deviant .zone-holder #module-arrange-map .sealed-zone.ch .ch-ctrl {
+        background: var(--card-bg);
+        border: none;
+        border-radius: 2px;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        padding: 15px;
+    }
+
+    #deviant .zone-holder #module-arrange-map .gr-top,
+    .gm-minimized .gr-top {
+        background: transparent !important;
+        border: none;
+    }
+
+    #deviant .zone-holder #module-arrange-map .sealed-zone.ch .ch-ctrl .gr,
+    .gm-minimized .gr-top .gr {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        padding: 10px;
+    }
+
+    #deviant .zone-holder #module-arrange-map .sealed-zone.ch .ch-ctrl .gr .icon {
+        display: none;
+    }
+
+    #deviant .zone-holder #module-arrange-map .sealed-zone.ch .ch-ctrl .gr * {
+        color: var(--primary-color);
+        font-size: 15pt;
+        font-stretch: condensed;
+        font-weight: normal;
+        text-indent: 7px;
+    }
+
+    #deviant .zone-holder #module-arrange-map .gm-controls .gmb-menu a {
+        background: no-repeat url("https://i.imgur.com/OygFMxF.png") center !important;
+        background-size: 20px auto !important;
+        filter: var(--invert) !important;
+        visibility: visible !important;
+    }
+
+    #deviant .inline-catalog-holder .indizone.modalfunk {
+        background: var(--card-bg) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        width: 97% !important;
+        margin: 20px auto !important;
+    }
+
+    #deviant .inline-catalog-holder .indizone.modalfunk > div > h3,
+    #deviant .inline-catalog-holder .indizone.modalfunk > div > em {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 20pt !important;
+        font-stretch: condensed;
+        font-style: normal;
+        font-weight: normal;
+    }
+
+    #deviant .inline-catalog-holder .indizone.modalfunk .widget-categories * {
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed;
+        font-weight: normal;
+    }
+
+    #deviant .inline-catalog-holder .gm-clog i.bigicon {
+        display: none !important;
+    }
+
+    #deviant .inline-catalog-holder .gm-clog .gr {
+        height: auto !important;
+        padding-left: 20px !important;
+    }
+
+    #deviant .inline-catalog-holder .gm-minimized .gr-top .gr h2 * {
+        color: var(--primary-color) !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    #deviant .inline-catalog-holder .gm-clog .clog-only {
+        color: var(--secondary-color) !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    #deviant .inline-catalog-holder .indizone-vr,
+    #deviant .inline-catalog-holder .gm-clog .clog-only .addbutton,
+    #deviant .inline-catalog-holder .clog .viewbutton {
+        display: none;
     }
 
     /* PROFILE */
@@ -1773,6 +2054,42 @@
         margin-left: 10px !important;
     }
 
+    .group-gallery-edit-controls,
+    .gallery-edit-controls {
+
+        /*** GALLERY EDITOR ***/
+        background: transparent !important;
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    .group-gallery-edit-controls h3,
+    .gallery-edit-controls h3 {
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 20pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        letter-spacing: 0px;
+        margin-bottom: 5px;
+    }
+
+    .gallery-edit-controls .smbutton.smbutton-blue {
+        background: #00B8D3 !important;
+    }
+
+    .gallery-edit-controls .smbutton.smbutton-blue span {
+        border: none !important;
+    }
+
+    #gmi-EditableResourceStream .details {
+        display: none !important;
+    }
+
     .folder-title {
 
         /*** GALLERY FOLDER TITLE ***/
@@ -1862,6 +2179,22 @@
         height: 30px !important;
         line-height: 30px !important;
         padding: 8px 15px 8px 8px !important;
+        text-shadow: none !important;
+        text-transform: uppercase !important;
+    }
+
+    #deviant .options-button-container .collectionwatch {
+        background: #71BA51 !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        font-family: "Roboto" !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        font-weight: bold !important;
+        width: auto !important;
+        padding: 5px 12px !important;
         text-shadow: none !important;
         text-transform: uppercase !important;
     }
@@ -2244,7 +2577,9 @@
     .dev-page-view .dev-about-cat-cc *,
     .top-report-link ~ .dev-about-tags-cc *,
     .dev-about-tags-cc.dev-about-breadcrumb *,
-    .discoverytag_container .header a.discoverytag {
+    .discoverytag_container .header a.discoverytag,
+    .folderview .folderview-top .discoverytags a,
+    .folderview .folderview-top .discoverytags .discoverytag {
         color: var(--primary-color) !important;
         font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
         font-size: 14pt !important;
@@ -2253,7 +2588,9 @@
 
     .top-report-link ~ .dev-about-tags-cc .discoverytag,
     .dev-about-tags-cc.dev-about-breadcrumb .discoverytag,
-    .discoverytag_container .header a.discoverytag {
+    .discoverytag_container .header a.discoverytag,
+    .folderview .folderview-top .discoverytags a,
+    .folderview .folderview-top .discoverytags .discoverytag {
         background: #16A085 !important;
         border-radius: 1px !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
@@ -2262,6 +2599,12 @@
         padding: 5px 10px 7px 10px !important;
         margin-right: 5px !important;
         margin-bottom: 10px !important;
+    }
+
+    .folderview .folderview-top .discoverytags {
+        margin-top: 10px !important;
+        margin-bottom: 10px !important;
+        margin-left: 15px !important;
     }
 
     body:not(.mobile-devpage-uplift) .dev-about-breadcrumb a {
@@ -2443,7 +2786,8 @@
     #comment #gmi-CCommentMaster #gmi-CCommentThread .ccomment img[src="https://a.deviantart.net/avatars/default.gif"],
     #comments #gmi-CCommentMaster #gmi-CCommentThread .ccomment img[src="https://a.deviantart.net/avatars/default.gif"],
     .authorative-avatar img[src="https://a.deviantart.net/avatars/default.gif"],
-    .pppp.c img[src="https://a.deviantart.net/avatars/default.gif"] {
+    .pppp.c img[src="https://a.deviantart.net/avatars/default.gif"],
+    .mcb-whoicon img[src="https://a.deviantart.net/avatars/default.gif"] {
         background: no-repeat url("https://i.imgur.com/eOYtNsW.jpg") center !important;
         background-size: cover !important;
         height: 0px !important;
@@ -2552,6 +2896,10 @@
         font-size: 15pt !important;
         font-stretch: condensed !important;
         font-weight: normal;
+    }
+
+    .ccwriter-wrapper {
+        font-weight: normal !important;
     }
 
     .dev-page-view .dev-page-below-tabs .cctextarea .cctextarea-ctrl,
@@ -4473,6 +4821,12 @@
         display: none !important;
     }
 
+    #notes .notesfmessage {
+        color: var(--primary-color) !important;
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+    }
+
     #notes .push {
 
         /*** NOTE RIGHT BOX CONTENT ***/
@@ -4491,6 +4845,7 @@
     }
 
     #note-intro h3 {
+        color: var(--primary-color) !important;
         font-family: "Roboto" !important;
         font-size: 17pt !important;
         font-stretch: condensed !important;
@@ -4500,9 +4855,11 @@
     }
 
     #note-intro p {
+        color: var(--secondary-color) !important;
         font-family: "Roboto" !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
         text-shadow: none !important;
-        font-size: 12pt !important;
     }
 
     #notes .footer .note-controls {
@@ -4540,6 +4897,7 @@
         font-family: "Roboto" !important;
         font-size: 15pt !important;
         font-stretch: condensed !important;
+        line-height: 20pt !important;
     }
 
     #recipient-textareas,
@@ -5944,6 +6302,107 @@
     ul.menu_holder li > a:not(.active):hover {
         background: transparent;
         color: var(--primary-color) !important;
+    }
+
+    /* LOGIN */
+
+    /** DESCRIPTION : change the elements of the login page **/
+    #solid-gone .catbar,
+    .rockedout-fella,
+    .rockedout-page #rockedout-subtitle,
+    #login-form-container h2 {
+        display: none;
+    }
+
+    .rockedout-page #login-form-container {
+        height: 240px !important;
+        position: absolute !important;
+        top: 100px !important;
+        right: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+    }
+
+    .rockedout-page #login-form-container,
+    .login-page #login,
+    .login-page #lost-password,
+    .login-page .px-blocked {
+        background: var(--card-bg);
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        padding: 20px !important;
+    }
+
+    .login-page #login td *,
+    .rockedout-page #login-form-container table * {
+        color: var(--primary-color);
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal;
+    }
+
+    .rockedout-page #login-form-container table * {
+        font-weight: normal !important;
+    }
+
+    #login_username,
+    #login_password,
+    .rockedout-page #login-form-container table input {
+        background: var(--card-bg-2) !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        border: none !important;
+        margin-left: 10px !important;
+    }
+
+    .login-page .smbutton,
+    .rockedout-page #login-form-container table .smbutton {
+        background: #5FAC75 !important;
+        color: #FFF !important;
+        font-weight: bold !important;
+    }
+
+    .rockedout-page #forgot-container {
+        font-size: 15pt !important;
+        font-stretch: condensed;
+        position: absolute !important;
+        top: 400px !important;
+        right: 0px !important;
+        left: 0px !important;
+        margin: auto !important;
+    }
+
+    /* ERROR */
+
+    /** DESCRIPTION : change the elements of the error page **/
+
+    .error-404 #content {
+        background: no-repeat url("https://i.imgur.com/tVRfwfr.png") center;
+        background-size: cover;
+        margin-top: 100px;
+    }
+
+    .error-404 #title,
+    .error-404 #description,
+    .error-404 #other-destinations {
+        display: none;
+    }
+
+    #final-destination {
+        background: #5FAC75 !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        color: #FFF !important;
+        font-family: "Roboto" !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+        text-shadow: none !important;
+        padding: 8px 20px 12px 20px !important;
+        width: auto !important;
+        text-align: center !important;
+        position: fixed !important;
+        bottom: 30px !important;
+        left: 30px !important;
     }
 
 }
