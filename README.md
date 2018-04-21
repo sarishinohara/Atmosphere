@@ -28,10 +28,13 @@ Instruction
 
 <strong>Step 2 : Install the script </strong>
 <ol>
-<li> Via userstyles (<a href="https://userstyles.org/styles/144757/atmosphere-o-light-da-css">light version</a> or <a href="https://userstyles.org/styles/157416/atmosphere-o-dark-da-css">dark version</a>) : click the button <i>install Style</i> and it's done.</li>
-<li> Or manually (<a href="https://pastebin.com/r3bqsuuv">light version</a> or <a href="https://pastebin.com/re0sBM9h">dark version</a>) : create a new style in Stylish/Stylus and copy/paste the script in it. The script was written for Firefox Mozilla, that's why for Google Chrome and such, you'll have to click the button <i>Import from Mozilla.</i></li>
-<li><b>(NEW) STYLUS ONLY</b> : <a href="https://raw.githubusercontent.com/Catgrills/Atmosphere-O/master/atmosphere-o.user.css">click here</a>.</li>
-</ol>
+<li>Via <b>userstyles</b> : click the button <i>install Style</i> and it's done.
+  <ol>
+    <li><a href="https://userstyles.org/styles/157416/atmosphere-o-dark-da-css">Atmosphere-O dark theme</a></li>
+    <li><a href="https://userstyles.org/styles/144757/atmosphere-o-light-da-css">Atmosphere-O light theme</a></li>
+  </ol>
+</li>
+<li>Or directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Atmosphere-O/master/atmosphere-o.user.css">click here</a></li>
 
 <strong>Step 3 : Install the font </strong>
 
