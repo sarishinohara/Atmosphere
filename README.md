@@ -25,9 +25,7 @@ Instruction
 + for Dolphin : <a href="https://play.google.com/store/apps/details?id=ru.pmmlabs.stylish&amp;hl=en">Stylish</a>
 
 <strong>Step 2 : Install the script </strong>
-+ Via <b>userstyles</b> : click the button <i>install Style</i> and it's done.
-    1. <a href="https://userstyles.org/styles/157416/atmosphere-o-dark-da-css">Dark theme</a>
-    2. <a href="https://userstyles.org/styles/144757/atmosphere-o-light-da-css">Light theme</a>
++ Via <b>userstyles</b> : <a href="https://userstyles.org/styles/157416/atmosphere-o-dark-da-css">Dark theme</a> or <a href="https://userstyles.org/styles/144757/atmosphere-o-light-da-css">Light theme</a>
 + Or directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Atmosphere-O/master/atmosphere-o.user.css">click here</a>
 
 <strong>Step 3 : Install the font </strong>
