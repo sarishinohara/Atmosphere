@@ -30,11 +30,12 @@ Instruction
 <ol>
 <li>Via <b>userstyles</b> : click the button <i>install Style</i> and it's done.
   <ol>
-    <li><a href="https://userstyles.org/styles/157416/atmosphere-o-dark-da-css">Atmosphere-O dark theme</a></li>
-    <li><a href="https://userstyles.org/styles/144757/atmosphere-o-light-da-css">Atmosphere-O light theme</a></li>
+    <li><a href="https://userstyles.org/styles/157416/atmosphere-o-dark-da-css">Dark theme</a></li>
+    <li><a href="https://userstyles.org/styles/144757/atmosphere-o-light-da-css">Light theme</a></li>
   </ol>
 </li>
 <li>Or directly with <b>Stylus</b> : <a href="https://raw.githubusercontent.com/Catgrills/Atmosphere-O/master/atmosphere-o.user.css">click here</a></li>
+</ol>
 
 <strong>Step 3 : Install the font </strong>
 
