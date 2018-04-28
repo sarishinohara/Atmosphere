@@ -126,7 +126,9 @@
     .stash-upload #stash-form .smbutton,
     .show-more-button,
     .dev-page-view .dev-page-button,
-    .ile-button.ile-handicapped {
+    .ile-button.ile-handicapped,
+    .smbutton.journal-preview,
+    #journal-edit-container .ile-category-button span.smbutton {
 
         /*** BIG BUTTONS ***/
         background-image: none !important;
@@ -148,7 +150,9 @@
     .smbutton.smbutton-wide *,
     .dev-page-view .dev-page-button *,
     .stash-upload #stash-form .smbutton *,
-    .ile-button.ile-handicapped * {
+    .ile-button.ile-handicapped *,
+    .smbutton.journal-preview *,
+    #journal-edit-container .ile-category-button span.smbutton * {
         border: none !important;
         color: #FFF !important;
         font-family: "Roboto" !important;
@@ -213,6 +217,22 @@
         color: var(--link-color) !important;
     }
 
+    .minibrowse-container h1[style="color:#607066;text-align:center;padding-top:4em;"] {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 25pt !important;
+        font-stretch: condensed;
+        font-weight: normal;
+        letter-spacing: 0px !important;
+    }
+
+    .minibrowse-container p[style="text-align:center;"],
+    .minibrowse-container p[style="text-align:center;"] * {
+        color: var(--secondary-color) !important;
+        font-size: 20pt !important;
+        font-stretch: condensed;
+    }
+
     .badge-stack,
     body.gruze .forum_uplift_topic a.commentfaq,
     .browse-container.newbrowse .browse-result-summary,
@@ -223,6 +243,7 @@
     .browse-left-bar.browse-left-bar-inner .browse-link-prints span,
     .browse-facet-browse-links hr.browse-divider,
     .browse-page-header,
+    #browse-results .thumb-limit-picker,
     #browse-results div.mlt-seed-container,
     #browse-results .mlt-seed-details,
     .browse-container.newbrowse .browse-top-bar .browse-explore-tags,
@@ -231,7 +252,7 @@
     #comment .main-comment .c,
     #gmi-CCommentMaster .c,
     #gmi-GMFrame_Gruser .main-comment .c,
-    .mods-column-ll #gmi-CCommentMaster .c,
+    #gmi-CCommentMaster .c,
     .commons_license_summary img,
     #comments .gr-top,
     #comments i.gr1,
@@ -272,9 +293,14 @@
     .discoverytag-hash,
     body.edit-history .edits,
     #fake-col-left,
+    .sleekadfooter,
+    .f img[src="https://st.deviantart.net/minish/gruzecontrol/icons/journal.gif?2"],
+    .gr-top img[src="https://st.deviantart.net/icons/userpage/friends.gif"],
     .feed-action .text-collapsed::before,
     .feed-action .text-collapsed::after,
     .feed-top-bar.feed_improvements,
+    #aboutus-filter hr,
+    #aboutus hr,
     .forum_thread .forum_sidebar,
     .forum_uplift_topic .topic_username,
     #gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-top h2 img,
@@ -304,16 +330,16 @@
     .backroom .gr-headless i.gt3 i,
     .gr-recent_polls,
     .gr-top.gr-top-alone,
-    .mods-column-ll .gr-top .gr i,
+    .gr-top .gr i,
     .gruz-badgeholder.popup-unfriendly,
     .grbubbletip.renamed,
     i.tri,
     .journal-module .more-journals-link,
     .journal-module .journal-wrapper .journal-footer,
+    #group .gr-sidebarbox.gr-info,
     #group .gruze-sidebar-end,
-    #group .gr-bloggers,
     #group .more-journals-link,
-    .match-body-height > .guideblock:last-child:not(.shineblock),.mature-tag.followed-by-report-button,.mcbox-inner.mcbox-inner-thumb.mcbox-inner-thumb-deviation .mcb-commentcount,.messages-menu #birthday-zone,.module-blocks #gmi-GMFrame_Gruser:first-child .gr-box .grf-indent .text,#notes .current-note span.sel-arrow,#notes .mcb-note-box .note-controls,.notesfmessage.notesuccess .icon,#oh-menu-upgrade > a,#oh-menu-promo,.page-results #gmi-GPage #headerZone,.paging-results.paging-results-first-page.browse-link-button.popup-trigger,#pointsdownload_widget .dev-page-button i,.popup2-darkspeech,.search-box-clear.search-clear,.stash-create.stash-edit,.tab .icon,.user-symbol.beta,.user-symbol.premium,.user-symbol.senior,.watch-suggestions-home.visible {
+    .match-body-height > .guideblock:last-child:not(.shineblock),.mature-tag.followed-by-report-button,.mcbox-inner.mcbox-inner-thumb.mcbox-inner-thumb-deviation .mcb-commentcount,.messages-menu #birthday-zone,.module-blocks #gmi-GMFrame_Gruser:first-child .gr-box .grf-indent .text,#notes .current-note span.sel-arrow,#notes .mcb-note-box .note-controls,.notesfmessage.notesuccess .icon,#oh-menu-upgrade > a,#oh-menu-promo,.page-results #gmi-GPage #headerZone,.paging-results.paging-results-first-page.browse-link-button.popup-trigger,#pointsdownload_widget .dev-page-button i,.popup2-darkspeech,.search-box-clear.search-clear,.stash-create.stash-edit,.tab .icon,.user-symbol.beta,.user-symbol.premium,.user-symbol.senior,.user-symbol.super,.watch-suggestions-home.visible {
         display: none !important;
     }
 
@@ -1063,6 +1089,12 @@
         border: none !important;
     }
 
+    #gmi-Mutant_AppEditor {
+        width: 100% !important;
+        position: absolute !important;
+        top: 280px !important;
+    }
+
     #user-edit-header .ch.ch-indi {
         background: transparent;
         border: none !important;
@@ -1369,6 +1401,10 @@
         overflow: hidden !important;
     }
 
+    #gmi-Gruser #group .blues-bar {
+        max-width: 100% !important;
+    }
+
     .blues-bar .blues-bar-ctrl {
         border: none !important;
         overflow: visible !important;
@@ -1447,14 +1483,21 @@
         /*** PROFILE CONTAINER BOXES ***/
         border: none !important;
         border-radius: 1px !important;
-        box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
+    }
+
+    .grf-mirror .gr-box.gr-genericbox,
+    #group .gruze-sidebar .gr-box.gr-genericbox {
+        box-shadow: none !important;
     }
 
     #gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-top,
     #gmi-Gruser #group #gruze-columns .gr-box.gr-genericbox .gr-top,
     #gmi-Gruser #deviant #gruze-columns .gr-grouplistbox .gr-top,
     #gmi-Gruser #group #gruze-columns .gr-box.gr-membox .gr-top,
-    .mods-column-ll .gr-top {
+    .gr-top,
+    .mods-column-ll .gr-top,
+    .mods-column-rr .gr-top {
 
         /*** PROFILE CONTAINER BOXES HEADER ***/
         border: none !important;
@@ -1466,7 +1509,8 @@
     #gmi-Gruser #group #gruze-columns .gr-box.gr-genericbox .gr-top .gr,
     #gmi-Gruser #deviant #gruze-columns .gr-grouplistbox .gr-top .gr,
     #gmi-Gruser #group #gruze-columns .gr-box.gr-membox .gr-top .gr,
-    .mods-column-ll .gr-top .gr {
+    .mods-column-ll .gr-top .gr,
+    .mods-column-rr .gr-top .gr {
         background: var(--card-bg) !important;
         border-width: 0px 0px 1px 0px !important;
         border-bottom: 1px dotted var(--border-color) !important;
@@ -1475,10 +1519,18 @@
         padding: 10px 20px 15px 20px;
     }
 
+    #gruze-page .deviation-plain-view .journal-wrapper2 .negate-box-margin .gr-box .gr-top .gr,
+    #journal-edit-container .deviation-plain-view .journal-wrapper2 .negate-box-margin .gr-box .gr-top .gr {
+        padding: 0px 0px 40px 25px !important;
+        margin-left: -20px !important;
+    }
+
     #gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-top .gr *,
     #gmi-Gruser #group #gruze-columns .gr-box.gr-genericbox .gr-top .gr *,
     #gmi-Gruser #deviant #gruze-columns .gr-grouplistbox .gr-top .gr *,
-    .mods-column-ll .gr-top .gr * {
+    .gr-top .gr *,
+    .mods-column-ll .gr-top .gr *,
+    .mods-column-rr .gr-top .gr * {
         color: var(--primary-color);
         font-family: "Roboto" !important;
         font-size: 20pt;
@@ -1525,13 +1577,22 @@
     #gmi-Gruser #group #gruze-columns .gr-box.gr-genericbox .gr-body,
     #gmi-Gruser #deviant #gruze-columns .gr-grouplistbox .gr-body,
     #gmi-Gruser #group #gruze-columns .gr-box.gr-membox .gr-body,
-    .mods-column-ll .gr-body {
+    .mods-column-ll .gr-body,
+    .mods-column-rr .gr-body {
 
         /*** PROFILE CONTAINER BOXES BODY ***/
         background: var(--card-bg) !important;
         border: none !important;
         border-bottom-right-radius: 2px !important;
         border-bottom-left-radius: 2px !important;
+    }
+
+    #gmi-Gruser #group #gruze-columns .gruze-sidebar .gr-box.gr-genericbox.gr-aggregation-list .gr-body,
+    #gmi-Gruser #group #gruze-columns .gruze-sidebar .gr-box.gr-free.gr-genericbox.gr-collections .gr-body,
+    #gmi-Gruser #group #gruze-columns .gruze-sidebar .gr-box.gr-free.gr-genericbox.gr-collections .gr-body .gr {
+        background: var(--body-bg) !important;
+        border: none !important;
+        box-shadow: none !important;
     }
 
     #gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-body .gr,
@@ -1562,13 +1623,49 @@
         padding: 4px 3px;
     }
 
-    #gmi-Gruser #group #gruze-columns .gr-box .mem-display .rolelabel.f {
+    #group .gr-box .mem-display .rolelabel.f {
         background: #62C462 !important;
         border-radius: 2px !important;
         font-family: "Roboto" !important;
         font-size: 17pt !important;
         font-stretch: condensed !important;
         font-weight: normal !important;
+    }
+
+    #group .filter.selected {
+        border-radius: 2px !important;
+        font-family: "Roboto" !important;
+        font-size: 17pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    #group .filter:not(.selected) {
+        margin-top: 5px !important;
+    }
+
+    #group .filter * {
+        color: var(--primary-color) !important;
+        font-size: 17pt !important;
+        font-stretch: condensed;
+    }
+
+    .misc * {
+        color: var(--secondary-color) !important;
+        font-size: 15pt !important;
+        font-family: "Roboto" !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        line-height: 22pt !important;
+    }
+
+    #aboutus-filter #aboutus-member-search {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        color: var(--primary-color) !important;
+        margin-bottom: 10px !important;
     }
 
     #gmi-Gruser #deviant #gruze-columns .gr-grouplistbox .gr-body .gr .gm-tabs,
@@ -1600,6 +1697,7 @@
     #gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-body .pppp a .avatar,
     #gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-body .pp.list.c .avatar,
     #gmi-Gruser #group #gruze-columns .gr-body .pppp .avatar,
+    #group .gr-body .pppp .avatar,
     #gmi-Gruser #group #gruze-columns .gr-body .list .avatar,
     .grf-deviants .avatar,
     #deviation_critiques .avatar,
@@ -1609,6 +1707,16 @@
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .4) !important;
         margin-right: 5px !important;
         margin-bottom: 5px !important;
+    }
+
+    .grf-deviants .avatar.group {
+        border-radius: 2px !important;
+    }
+
+    .grf-deviants * {
+        color: var(--secondary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
     }
 
     #gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-body .gr .smbutton.smbutton-pale,
@@ -1758,6 +1866,7 @@
     .feed-action .feed-action-details *,
     .f.grf-mirror,
     .f.grf-mirror * {
+        color: var(--primary-color) !important;
         font-family: "Roboto" !important;
         font-size: 15pt !important;
         font-stretch: condensed !important;
@@ -1811,6 +1920,37 @@
     .feed-action.feed-action-type-deviations .feed-action-deviation-details,
     .feed-action .feed-action-content {
         background: var(--card-bg) !important;
+    }
+
+    .feed-action-content.allow-overflow {
+        border-top: 1px dotted var(--border-color) !important;
+    }
+
+    .feed-deviation-journal-wrapper.journal-collapsed {
+        box-shadow: none !important;
+        max-height: 100% !important;
+    }
+
+    .feed-deviation-journal-wrapper.journal-collapsed .journal {
+        box-shadow: none !important;
+    }
+
+    .feed-action-content.allow-overflow .journal-wrapper2 .gr-top h2 * {
+        font-size: 20pt !important;
+    }
+
+    .feed-action.feed-action-type-deviations .feed-action-deviation .journal-collapsed:hover::before,
+    .feed-action.feed-action-type-groupdeviations .feed-action-deviation .journal-collapsed:hover::before,
+    .feed-action.feed-action-type-journals .feed-action-deviation .journal-collapsed:hover::before {
+        opacity: 0 !important;
+    }
+
+    .feed-action-deviation-details.journal-collapsed,
+    .feed-action.feed-action-type-deviations .feed-action-deviation .journal-collapsed::after,
+    .feed-action.feed-action-type-groupdeviations .feed-action-deviation .journal-collapsed::after,
+    .feed-action.feed-action-type-journals .feed-action-deviation .journal-collapsed::after,
+    .feed-action.feed-action-type-journals .feed-action-deviation-details {
+        display: none !important;
     }
 
     .feed-action.feed-action-type-status.feed-action-selfaction .feed-action-content,
@@ -1922,7 +2062,54 @@
 
         /*** GROUP MAIN CONTAINER ***/
         margin-left: 0px !important;
-        margin-top: -24px !important;
+    }
+
+    #pagemenu {
+
+        /*** GROUP MENU ***/
+        background: var(--card-bg) !important;
+        border: none !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        padding-top: 10px !important;
+        width: 100% !important;
+        text-align: center !important;
+        position: absolute !important;
+        top: -20px;
+        left: 0px !important;
+    }
+
+    #pagemenu a {
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 17pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        margin-right: 20px !important;
+        width: auto !important;
+        display: inline-block !important;
+    }
+
+    .guideblock {
+        margin-top: 20px !important;
+        margin-left: -25px !important;
+    }
+
+    .guideblock a {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 17pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        margin-bottom: 10px !important;
+    }
+
+    #pagemenu a i,
+    .guideblock i,
+    .ultramenu .blockdisabled,
+    .blockmenu-hr,
+    .gruze-sidebar .gr-customtext {
+        display: none !important;
     }
 
     #group .gruze-main.pad-left .group_description {
@@ -1932,6 +2119,99 @@
         font-size: 15pt !important;
         font-stretch: condensed !important;
         line-height: 20pt !important;
+        overflow: visible !important;
+    }
+
+    .affiliates div.grf-description,
+    #group .gr .grf-indent .text,
+    #group .gr .gr-bloggers .text {
+
+        /*** GROUP BOXES CONTENT ***/
+        color: var(--primary-color) !important;
+        font-size: 15pt !important;
+        font-stretch: condensed;
+    }
+
+    #group .mods-hh .gr-activity .gr .f.list .text,
+    #group .mods-hh .gr-bloggers .gr .f.list .text {
+        margin-top: -30px !important;
+    }
+
+    #group .mods-hh .gr-activity .gr .f.list .text .entry-count,
+    #group .mods-hh .gr-bloggers .gr .f.list .text .entry-count {
+        margin-left: 6px !important;
+    }
+
+    #aboutus .user-description .role {
+        color: var(--secondary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed;
+    }
+
+    #aboutus .bio {
+        color: var(--secondary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed;
+        line-height: 20pt !important;
+    }
+
+    #aboutus .member-container .u img {
+        border-radius: 50% !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        margin-right: 10px !important;
+    }
+
+    .affiliates div.grf-deviants-stack a {
+        font-family: "Roboto" !important;
+        font-size: 16pt !important;
+        font-stretch: condensed !important;
+    }
+
+    .affiliates div.grf-deviants-stack .grf-tagline {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+    }
+
+    .groupstats .weekly-stats .action-types {
+        width: 400px !important;
+    }
+
+    .groupstats .weekly-stats .posneg-caption,
+    .groupstats.generic .weekly-stats .mini-total {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
+    }
+
+    #group .gr-box.gr-genericbox.gr-bloggers.gr-activity .gr-midbody {
+        background: var(--card-bg) !important;
+        border-bottom: 1px dotted var(--border-color) !important;
+        padding-top: 20px !important;
+        padding-bottom: 25px !important;
+        margin-bottom: -25px !important;
+    }
+
+    #group .iconset-gruser .gmbutton2 {
+        background: var(--card-bg-2) !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        color: var(--primary-color);
+        font-weight: bold !important;
+        padding: 8px 10px !important;
+        text-transform: uppercase !important;
+    }
+
+    #group .info .link-more {
+        display: none !important;
+    }
+
+    #group .iconset-gruser .gmbutton2 .icon {
+        display: none !important;
     }
 
     #group .blues-bar .gmbutton2admin .gmbutton2 {
@@ -1951,8 +2231,18 @@
         margin-left: -20px !important;
     }
 
+    .gr-box.gr-sidebarbox.gr-polls h2 {
+
+        /*** GROUP HOME SIDEBAR ***/
+        color: var(--primary-color) !important;
+        font-size: 15pt !important;
+        font-style: italic !important;
+        font-weight: normal !important;
+    }
+
     #group .module-blocks .gr-top,
-    #group .module-blocks .gr-box {
+    #group .module-blocks .gr-box,
+    .guideblock {
 
         /*** GROUP GALLERY SIDEBAR ***/
         border: none !important;
@@ -1995,6 +2285,57 @@
         font-stretch: condensed !important;
         font-weight: normal !important;
         margin-top: 10px !important;
+        padding-top: 10px;
+    }
+
+    .gr-bloggers.gr-gallery_contributors,
+    .gr-bloggers.gr-faves_contributors {
+        margin-top: -12px !important;
+    }
+
+    .gruze-sidebar .gr-bloggers.gr-activity {
+        margin-top: -40px !important;
+    }
+
+    .gruze-sidebar .gr-bloggers.gr-gallery_contributors h2,
+    .gruze-sidebar .gr-bloggers.gr-faves_contributors h2 {
+        color: var(--primary-color) !important;
+        font-size: 18pt !important;
+        font-weight: normal !important;
+    }
+
+    .gruze-sidebar .gr-bloggers.gr-gallery_contributors li,
+    .gruze-sidebar .gr-bloggers.gr-faves_contributors li,
+    .gruze-sidebar .gr-bloggers.gr-activity .list li {
+        background: var(--card-bg) !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        padding: 10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .gruze-sidebar .gr-bloggers.gr-activity .list li {
+        height: 140px !important;
+    }
+
+    .gruze-sidebar .gr-bloggers.gr-gallery_contributors li img,
+    .gruze-sidebar .gr-bloggers.gr-faves_contributors li img,
+    .gruze-sidebar .gr-bloggers.gr-activity .list li img {
+        border-radius: 50% !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+    }
+
+    .gruze-sidebar .gr-bloggers.gr-gallery_contributors li *,
+    .gruze-sidebar .gr-bloggers.gr-faves_contributors li *,
+    .gruze-sidebar .gr-bloggers.gr-activity .list li * {
+        font-size: 14pt !important;
+        font-stretch: condensed;
+        font-weight: normal !important;
+    }
+
+    .gr-bloggers.gr-gallery_contributors li .latest-entry,
+    .gr-bloggers.gr-faves_contributors li .latest-entry {
+        color: var(--primary-color) !important;
     }
 
     /* GALLERY */
@@ -2232,11 +2573,15 @@
 
     .gallery-categories.browse-facet li *,
     .gallery-categories.browse-facet .noncollapseHeader,
-    .gruze-sidebar.left-sidebar .gl-text a.a,
     .left-sidebar .browse-facet li *,
     .left-sidebar .noncollapseHeader {
         background: transparent;
         font-size: 14pt !important;
+        font-stretch: condensed !important;
+    }
+
+    .gruze-sidebar.left-sidebar .gl-text a.a {
+        font-size: 18pt !important;
         font-stretch: condensed !important;
     }
 
@@ -2300,13 +2645,21 @@
         margin-top: 110px !important;
     }
 
+    .empty-state .message h1,
+    .empty-state .message h1 *,
     .empty-state.prints * {
         background: none !important;
         color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
         font-size: 15pt !important;
         font-stretch: condensed !important;
         font-weight: normal !important;
+        letter-spacing: 0px;
         text-shadow: none !important;
+    }
+
+    .empty-state .message h1 strong {
+        padding-left: 0px !important;
     }
 
     /* JOURNAL */
@@ -2315,6 +2668,16 @@
     .gruser-page-v7 .wrapper,
     .gruser-page-v7 #journal_sidebar {
         margin-top: 110px !important;
+    }
+
+    a.frame-button.submit.journal span,
+    a.frame-button.new-set span {
+        font-family: "Roboto" !important;
+        font-size: 17pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        letter-spacing: 0px !important;
+        text-shadow: none !important;
     }
 
     .empty-state.journal {
@@ -2326,10 +2689,213 @@
     .empty-state.journal * {
         background: none !important;
         color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
         font-size: 15pt !important;
         font-stretch: condensed !important;
         font-weight: normal !important;
+        letter-spacing: 0px !important;
         text-shadow: none !important;
+    }
+
+    .empty-state.journal .message h1 strong {
+        padding-left: 0px !important;
+    }
+
+    .empty-state.journal .action {
+        border: none !important;
+    }
+
+    .empty-state .action .smbutton * {
+        background: #00587A !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        font-weight: bold !important;
+        padding: 10px 20px !important;
+    }
+
+    /* STASH WRITER */
+
+    /** DESCRIPTION : change the elements of the stash writer page **/
+
+    .ccwriter-subframe.ccwriter-journal .commentwriter-toolbar {
+
+        /*** STASH WRITER TOOLBAR ***/
+        background: var(--card-bg);
+        padding: 10px !important;
+        top: 71px !important;
+    }
+
+    div.commentwriter-toolbar div.writer-toolbar .headerMenu {
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
+    }
+
+    div.commentwriter-toolbar div.writer-toolbar .headerMenu:hover {
+        border-color: transparent !important;
+    }
+
+    div.stashwriter-subtoolbar .writer-toolbar-separator,
+    body.ccwriter-subframe div.commentwriter-toolbar div.commentwriter-actions {
+        display: none;
+    }
+
+    .ccwriter-subframe.ccwriter-journal div.commentwriter-sidebar {
+
+        /*** STASH WRITER SIDEBAR ***/
+        background: var(--card-bg) !important;
+        border: none !important;
+        top: 138px !important;
+    }
+
+    body.ccwriter-subframe div.commentwriter-sidebar h3 {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 16pt !important;
+        font-stretch: condensed;
+    }
+
+    .stash-sidebar .types-container,
+    #stashwriter_sidebar_skins_container .types-container {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        padding: 10px;
+    }
+
+    .stash-sidebar .types-container {
+        min-height: 38px !important;
+    }
+
+    .stash-sidebar .types-container *,
+    #stashwriter_sidebar_skins_container .types-container * {
+        background: transparent !important;
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 14pt;
+        font-stretch: condensed;
+    }
+
+    .new-stack span.stack-crop div.freeform-wrapper strong:first-child,
+    .skins-content div.stream.stash-stream div.tt-a a.t,
+    .smbutton.smbutton-file-upload *,
+    .stash-sidebar div.stream.stash-stream div.tt-a a.t,
+    .stash-sidebar div.stream.stash-stream div.tt-a a.t .tt-fh-oe,
+    .t.undraggable {
+        font-family: "Roboto" !important;
+        font-size: 22pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal;
+        text-shadow: none !important;
+    }
+
+    .stash-sidebar div.writer-sidebar-main-art div.writer-sidebar-input-container input,
+    #stashwriter_sidebar div.writer-sidebar-main-art div.writer-sidebar-input-container input,
+    .stash-sidebar div.writer-sidebar-input-container input,
+    #stashwriter_sidebar div.writer-sidebar-input-container input,
+    #stashwriter_sidebar_skins_container div.writer-sidebar-input-container input {
+        background: var(--card-bg) !important;
+        border: none !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        font-size: 16pt !important;
+        padding-left: 10px !important;
+        width: 100% !important;
+        margin-top: 30px;
+        margin-left: -10px;
+    }
+
+    .stash-sidebar .more .smbutton {
+        background-color: #5FAC75 !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        color: #FFF !important;
+        font-weight: bold !important;
+        padding: 10px !important;
+        text-transform: uppercase !important;
+    }
+
+    .new-icon-premium-badge.mark-large {
+        display: none !important;
+    }
+
+    div.journal-editor-main.left-handed {
+
+        /*** STASH WRITER CONTENT ***/
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+        margin-right: 80px !important;
+    }
+
+    .journal-editor-main h3.journal-editor-create {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 20pt !important;
+        font-stretch: condensed !important;
+        letter-spacing: 0px !important;
+    }
+
+    #journal-subject {
+        width: 98% !important;
+    }
+
+    #journal-entry-form .ccwriter-shadow,
+    .journal-editor #journal-edit-container .journal-green #journal-subject,
+    #stashwriter_journal .journal-green #journal-subject {
+        border-color: var(--border-color) !important;
+        border-radius: 1px !important;
+        padding: 10px;
+        margin-top: 10px;
+    }
+
+    #journal-moreoptions {
+        background: var(--card-bg) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        font-size: 17pt !important;
+        font-stretch: condensed;
+    }
+
+    #journal-moreoptions-link {
+        background: none !important;
+        padding-left: 4px !important;
+    }
+
+    #journal-moreoptions-content img {
+        display: none !important;
+    }
+
+    #journal-moreoptions-content td,
+    #journal-moreoptions-content td * {
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+    }
+
+    #journal-moreoptions-content input.text,
+    div.journal-skin-editor div.modal-dialog-body input,
+    div.journal-skin-editor div.modal-dialog-body textarea {
+        background: var(--card-bg-2) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-stretch: condensed;
+    }
+
+    div.hh div.rr div[style="padding-left:4px"],
+    div.hh div.rr div[style="padding-left:4px"] * {
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        letter-spacing: 0px !important;
+    }
+
+    #journal-edit-container .ile-category-button span.smbutton {
+        background: #3E4651 !important;
+        width: 200px !important;
     }
 
     .wrapper #journal_main #browse-search-box {
@@ -2343,14 +2909,14 @@
     #group .journal-wrapper2 .journal,
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal {
         border-radius: 2px !important;
-        box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .3);
         margin-bottom: 30px !important;
     }
 
     #group .journal-wrapper2 .journal {
         border-radius: 2px !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
-        margin-bottom: 5px !important;
+        margin-bottom: 15px !important;
     }
 
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal {
@@ -2359,7 +2925,8 @@
 
     .gruser-page-v7 #journal_main .journal-green .gr-box,
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal .gr-box,
-    .mods-column-rr .journal-wrapper2 .journal-green .gr-box {
+    .mods-column-rr .journal-wrapper2 .journal-green .gr-box,
+    .journal-wrapper .journal-wrapper2 .journal-green .gr-box {
         background: var(--card-bg) !important;
         border: none !important;
     }
@@ -2418,15 +2985,26 @@
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal .gr-top .author,
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal .gr-top .author *,
     .mods-column-rr .journal-wrapper2 .journal .gr-top .author,
-    .mods-column-rr .journal-wrapper2 .journal .gr-top .author * {
+    .mods-column-rr .journal-wrapper2 .journal .gr-top .author *,
+    .journal-wrapper2 .negate-box-margin .gr-top .author,
+    .journal-wrapper2 .negate-box-margin .gr-top .author * {
         font-family: "Roboto" !important;
         font-size: 15pt !important;
         font-stretch: condensed !important;
     }
 
+    .gr-top .author {
+        color: #979595 !important;
+    }
+
+    .gr-top .author a {
+        color: #146E8F !important;
+    }
+
     .gruser-page-v7 #journal_main .journal-green .gr-top .category,
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal .gr-top .category,
-    .mods-column-rr .journal-wrapper2 .journal .gr-top .category {
+    .mods-column-rr .journal-wrapper2 .journal .gr-top .category,
+    .journal-wrapper2 .negate-box-margin .gr-top .category {
         color: transparent !important;
         font-size: 10pt !important;
         margin-top: 30px !important;
@@ -2434,7 +3012,9 @@
 
     .gruser-page-v7 #journal_main .journal-green .gr-top .category a span,
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal .gr-top .category a span,
-    .mods-column-rr .journal-wrapper2 .journal .gr-top .category .crumb span {
+    .mods-column-rr .journal-wrapper2 .journal .gr-top .category .crumb span,
+    .journal-wrapper2 .negate-box-margin .gr-top .category .crumb span,
+    .journal-wrapper2 .negate-box-margin .gr-top .category > a {
         background: #16A085 !important;
         border-radius: 1px !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
@@ -2457,8 +3037,23 @@
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal .gr-body .gr .text *,
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal-green .gr-body .list *,
     .mods-column-rr .journal-green .gr-body .text,
-    .mods-column-rr .journal-green .gr-body .text * {
+    .mods-column-rr .journal-green .gr-body .text *,
+    .journal-wrapper2 .negate-box-margin .gr-box .gr-body .grf-indent .text,
+    .gr-twitter .gr-body .grf-indent .text * {
         color: var(--primary-color);
+        font-family: "Roboto" !important;
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal;
+        line-height: 20pt !important;
+    }
+
+    .journal-green .gr-body ul.list {
+        padding: 0px 25px !important;
+    }
+
+    .journal-green .gr-body ul.list * {
+        color: var(--secondary-color);
         font-family: "Roboto" !important;
         font-size: 15pt !important;
         font-stretch: condensed !important;
@@ -2469,6 +3064,7 @@
     .gruser-page-v7 #journal_main .journal-green .gr-body .gr .c.ppb.alink.bottom,
     .dev-page-view .dev-view-deviation .journal-wrapper2 .journal .gr-body .gr .c.ppb.alink.bottom,
     .mods-column-rr .journal-module .journal-wrapper .c.ppb.alink.bottom,
+    .journal-wrapper2 .c.ppb.alink.bottom,
     .mods-column-rr .journal-module .journal-wrapper .journal-footer {
         display: none !important;
     }
@@ -2538,6 +3134,10 @@
     .dev-page-view .dev-title-container .dev-title-avatar img {
         border-radius: 50% !important;
         box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
+    }
+
+    .dev-title-avatar.dev-title-avatar-group a .avatar {
+        border-radius: 2px !important;
     }
 
     .dev-page-view .dev-title-container .title {
@@ -2898,7 +3498,8 @@
         font-weight: normal;
     }
 
-    .ccwriter-wrapper {
+    .ccwriter-wrapper *,
+    .status-form .status-entry.status-entry-expanded div.writer {
         font-weight: normal !important;
     }
 
@@ -2962,7 +3563,8 @@
     #gmi-CCommentMaster .preview,
     #cooler-comment-submit  #gmi-TalkPostWrapper .preview,
     .status-form .inputs .smbutton.status-preview,
-    .forum_uplift_topic .preview {
+    .forum_uplift_topic .preview,
+    .smbutton.journal-preview {
         background: #BF4A67 !important;
     }
 
@@ -3023,7 +3625,8 @@
     #comments #gmi-CCommentMaster #gmi-CCommentThread .ccomment .ctext.ch .cc-meta .username,
     #comment #gmi-CComment .ch-ctrl .ctext.ch .ch-ctrl .cc-meta .username,
     .comments #gmi-CComment .ch-ctrl .ctext.ch .ch-ctrl .cc-meta .username,
-    #gmi-CCommentThread #gmi-CComment .ch-ctrl .ctext.ch .ch-ctrl .cc-meta .username {
+    #gmi-CCommentThread #gmi-CComment .ch-ctrl .ctext.ch .ch-ctrl .cc-meta .username,
+    #group .user-description .username {
 
         /*** DEVIATION COMMENT POSTS META DATA AUTHOR ***/
         font-size: 18pt !important;
@@ -3358,6 +3961,13 @@
         padding-left: 5px !important;
     }
 
+    .details-section .grpname {
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+        line-height: 20pt !important;
+    }
+
     .group_featured_list .grptagline,
     .gruserbadge {
         color: var(--secondary-color) !important;
@@ -3387,6 +3997,10 @@
         font-stretch: condensed !important;
         font-weight: normal !important;
         letter-spacing: 0px !important;
+    }
+
+    .all-groups-button * {
+        color: var(--primary-color) !important;
     }
 
     .submit_to_groups_link.dev-page-button * {
@@ -3849,6 +4463,8 @@
         background: #62C462 !important;
         width: 50px;
         text-align: center;
+        position: absolute !important;
+        margin-top: -20px !important;
     }
 
     /* WATCH */
@@ -5317,6 +5933,39 @@
         letter-spacing: 0px !important;
     }
 
+    .grf-indent.ppp.critmod .gr-box .gr-body .gr {
+        background: var(--card-bg-2) !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+    }
+
+    .grf-indent.ppp.critmod .gr-box .gr-body .gr .title * {
+        font-size: 18pt !important;
+        font-stretch: condensed !important;
+        font-weight: normal !important;
+    }
+
+    .grf-indent.ppp.critmod .gr-box .gr-body .gr .artist {
+        color: var(--primary-color);
+        margin-bottom: 10px !important;
+    }
+
+    .grf-indent.ppp.critmod .gr-box .gr-body .gr  div[style="padding-right:220px;word-wrap:break-word;"] {
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+    }
+
+    .grf-indent.ppp.critmod .gr-box .gr-body .gr .artist,
+    .grf-indent.ppp.critmod .gr-box .gr-body .gr .artist * {
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+    }
+
+    .grf-indent.ppp.critmod .gr-box .gr-body .gr .readmore a {
+        color: var(--secondary-color) !important;
+    }
+
     /* FORUM */
 
     /** DESCRIPTION : change the element of the forum page **/
@@ -5512,7 +6161,8 @@
     .forum_content  #gmi-CCommentMaster .c,
     .main-content  #gmi-CCommentMaster .c,
     .main-comment  #gmi-CCommentMaster .c,
-    .mods-column-ll #gmi-GMFrame_Gruser #gmi-CCommentMaster .c {
+    .mods-column-ll #gmi-GMFrame_Gruser #gmi-CCommentMaster .c,
+    .mods-column-rr #gmi-GMFrame_Gruser #gmi-CCommentMaster .c {
 
         /*** FORUM THREAD COMMENTS ***/
         display: none !important;
@@ -5621,7 +6271,7 @@
     .browse2.critiqueable-browse-results {
 
         /*** CRITIQUES  REQUEST  ***/
-        margin-left: -135px !important;
+        margin-left: -172px !important;
     }
 
     /* CORRESPONDENCE */
@@ -5800,10 +6450,6 @@
         margin-top: 20px;
     }
 
-    .gr-bloggers.gr-gallery_contributors {
-        display: none !important;
-    }
-
     #groupsDirRight {
 
         /*** GROUPS RIGHT SIDEBAR ***/
@@ -5815,6 +6461,14 @@
     /** DESCRIPTION : change the elements of the submit art page **/
     #dv7.blank-form {
         margin-top: 10px !important;
+    }
+
+    .editmode {
+        left: -85px !important;
+    }
+
+    #overhead-collect #overhead.ile-edit {
+        left: 0px !important;
     }
 
     .multisubmit #output > .submit-tabbar {
@@ -5980,6 +6634,48 @@
         font-stretch: condensed !important;
     }
 
+    .pager-panes.pager-light.pager-tall-cat-chooser {
+
+        /*** SUBMIT CATEGORIES OPTIONS ***/
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+    }
+
+    #modal-form-category div.pager-light,
+    #modal-form-category div.pager-light div.pager2,
+    #modal-form-category div.pager-light div.page2,
+    #modal-form-category div.pager-light div.page2 a.f {
+        background-color: var(--card-bg) !important;
+        border-color: var(--border-color) !important;
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+        padding-bottom: 6px;
+    }
+
+    #modal-form-category div.pager-light div.page2 a.f.more {
+        background: no-repeat url("https://i.imgur.com/OygFMxF.png") 96% center !important;
+        background-size: 15px auto !important;
+    }
+
+    .ile-section-category .cat-preview {
+        background-color: var(--card-bg-2) !important;
+        border: none !important;
+    }
+
+    .ile-section-category .cat-preview .preview-text h3 {
+        border-bottom: 1px dotted #BEBEBE !important;
+    }
+
+    .ile-section-category .cat-preview * {
+        color: var(--primary-color) !important;
+        font-family: "Roboto" !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
+    }
+
     #ile-contents .ile-tags .tags-widget,
     div.modal #modal-form-category input.isearch,
     div.inline-category-picker #modal-form-category input.isearch {
@@ -6019,8 +6715,67 @@
 
         /*** SUBMIT PUBLICATION OPTIONS ***/
         border-radius: 1px !important;
-        box-shadow: none !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
         margin-left: -4px !important;
+    }
+
+    .ile-gallery-groups-button,
+    .ile-options-publish-button,
+    #ile-contents .ile_mod .smbutton.smbutton-white.smbutton-stash-white {
+        background: var(--card-bg) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+        padding: 10px !important;
+    }
+
+    .ile-gallery-groups-button {
+        height: 60px !important;
+    }
+
+    .ile-options-publish-button {
+        height: 45px !important;
+    }
+
+    .ile-gallery-groups-button *,
+    .ile-options-button *,
+    #ile-contents .ile_mod .smbutton.smbutton-white * {
+        border: none !important;
+        color: var(--primary-color) !important;
+        font-size: 14pt !important;
+        font-stretch: condensed;
+    }
+
+    #ile-contents .ile_mod .smbutton.smbutton-white.smbutton-stash-white b {
+        display: none;
+    }
+
+    .ile-options-popdown {
+        background: transparent;
+        border: none !important;
+        margin-left: -14px;
+    }
+
+    .ile-publish-section .ile-publish-bubble {
+        background: var(--card-bg) !important;
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+    }
+
+    .ile-publish-option {
+        color: var(--primary-color) !important;
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
+        margin-bottom: 12px !important;
+    }
+
+    #ile-contents .ile_mod.ile-license,
+    #ile-contents .ile_mod.ile-comments,
+    #ile-contents .ile_mod.ile-critiques {
+        color: var(--primary-color) !important;
+        font-size: 15pt !important;
+        font-stretch: condensed !important;
     }
 
     .ile-section-agreements,
@@ -6031,7 +6786,8 @@
     }
 
     .ile-section-agreements *,
-    .ile-section-remember * {
+    .ile-section-remember *,
+    .ile-notify-container * {
         color: var(--primary-color) !important;
         font-size: 15pt !important;
         font-stretch: condensed !important;
@@ -6407,7 +7163,7 @@
 
 }
 
-@-moz-document regexp("https://.*.deviantart.com/journal/poll/.*") {
+@-moz-document regexp("deviantart.com") {
     .blues-bar span.bb-with-sep,
     .blues-bar .bb-with-sep {
         display: none !important;
@@ -6426,3 +7182,11 @@
     }
 
 }
+
+@-moz-document regexp("https://.*.deviantart.com/aboutus/") {
+    #group .gruze-sidebar {
+        display: none !important;
+    }
+
+}
+
