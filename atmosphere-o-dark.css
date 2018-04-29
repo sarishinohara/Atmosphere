@@ -499,6 +499,14 @@
 		margin-top: -4px !important;
 	}
 
+	.deviantart #overhead-collect i.icon.i17 {
+
+		/*** HEADER MENU FEEDBACK ICON ***/
+		background: no-repeat url("https://i.imgur.com/O0Z1xme.png") center left !important;
+		background-size: 16px auto !important;
+		margin-top: -4px !important;
+	}
+    
 	.deviantart #oh-menu-split.splintered > a {
 		background: no-repeat url("https://i.imgur.com/OygFMxF.png") center !important;
 		background-size: 16px auto !important;
@@ -1925,6 +1933,10 @@
 	.feed-action-content.allow-overflow {
 		border-top: 1px dotted var(--border-color) !important;
 	}
+    
+	.feed-action-content.allow-overflow .journal {
+		box-shadow: none !important;
+	}
 
 	.feed-deviation-journal-wrapper.journal-collapsed {
 		box-shadow: none !important;
@@ -2196,7 +2208,7 @@
 		margin-bottom: -25px !important;
 	}
 
-	#group .iconset-gruser .gmbutton2 {
+	#group .gr-box .iconset-gruser .gmbutton2 {
 		background: var(--card-bg-2) !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
@@ -3208,7 +3220,7 @@
 	}
 
 	body:not(.mobile-devpage-uplift) .dev-about-breadcrumb a {
-		color: #FFF !important;
+		color: var(--primary-color) !important;
 	}
 
 	.dev-page-view .dev-title-container .dev-page-watch-button {
@@ -4666,6 +4678,26 @@
 		font-family: "Roboto" !important;
 		margin: 2px 8px;
 	}
+    
+    .vote-float * {
+        font-size: 14pt !important;
+        font-stretch: condensed !important;
+    }
+    
+    .vote-float .icons i {
+        margin-top: 6px !important;
+        margin-left: -4px !important;
+	}
+    
+    .gmbutton2.gmhuge.gmvoteyes {
+        background: no-repeat url("https://i.imgur.com/MXLCI2Q.png") center !important;
+        background-size: cover !important;
+    }
+    
+    .gmbutton2.gmhuge.gmvoteno {
+        background: no-repeat url("https://i.imgur.com/h7v8SWh.png") center !important; 
+        background-size: cover !important;
+    }
 
 	div.mcb-tab .stacklink-cover .tabtext {
 
@@ -5826,6 +5858,7 @@
 		font-size: 15pt;
 		font-stretch: condensed !important;
 		font-weight: normal;
+        margin-top: 20px !important;
 		margin-bottom: 15px !important;
 	}
 
@@ -5932,11 +5965,14 @@
 		font-weight: normal !important;
 		letter-spacing: 0px !important;
 	}
+    
+ 	.grf-indent.ppp.critmod .gr-box .gr-body  {
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+	}
 
 	.grf-indent.ppp.critmod .gr-box .gr-body .gr {
 		background: var(--card-bg-2) !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
 	.grf-indent.ppp.critmod .gr-box .gr-body .gr .title * {
@@ -6702,6 +6738,12 @@
 	div.inline-category-picker #modal-form-category input.isearch {
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 	}
+    
+    .inline-category-picker #modal-form-category div.pager-panes {
+        border: none !important;
+        border-radius: 2px !important;
+        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+    }
 
 	#ile-contents .ile-tags .tags-widget {
 		padding: 10px !important;
@@ -7182,7 +7224,6 @@
 	}
 
 }
-
 @-moz-document regexp("https://.*.deviantart.com/aboutus/") {
 	#group .gruze-sidebar {
 		display: none !important;
