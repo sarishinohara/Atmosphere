@@ -8,7 +8,7 @@
 @var select theme 'Theme' {
 	"Light": `
 	:root {
-        --body-bg: #modalspace !important;
+        --body-bg: #F3F3F3 !important;
 		--card-bg: #E8EDF1 !important;
 		--card-bg-2: #F8FAFB !important;
         --op-bg: rgba(243, 243, 243, .8) !important;
