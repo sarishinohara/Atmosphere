@@ -1,16 +1,17 @@
 /* ==UserStyle==
 @name           Atmosphere-O
 @namespace      https://github.com/Catgrills/Atmosphere-O
-@version        1.0.4
+@version        1.0.5
 @description    An userstyle for deviantArt called Atmosphere-O.
 @author         Catgrills/Katgrills
 @preprocessor 	uso
 @var select theme 'Theme' {
 	"Light": `
 	:root {
-        --body-bg: #F3F3F3 !important;
+        --body-bg: #modalspace !important;
 		--card-bg: #E8EDF1 !important;
 		--card-bg-2: #F8FAFB !important;
+        --op-bg: rgba(243, 243, 243, .8) !important;
 		--border-color: #BEBEBE !important;
 		--link-color: #44B39D !important;
 		--primary-color: #212121 !important;
@@ -23,6 +24,7 @@
 	    --body-bg: #242625 !important; 
 		--card-bg: #2B2D2C !important;
 		--card-bg-2: #101211 !important;
+        --op-bg: rgba(36, 38, 37, .8) !important;
 		--border-color: #101211 !important;
 		--link-color: #44B39D !important;
 		--primary-color: #FFF !important;
@@ -32,10 +34,10 @@
 	`
 }
 ==/UserStyle== */
-
 @-moz-document domain("deviantart.com") {
-/*[[theme]]*/
-    
+
+	/*[[theme]]*/
+
 	/* GENERAL */
 
 	/** DESCRIPTION : set the main font and change others elements **/
@@ -150,13 +152,18 @@
 	.dev-page-view .dev-page-button,
 	.ile-button.ile-handicapped,
 	.smbutton.journal-preview,
-	#journal-edit-container .ile-category-button span.smbutton {
+	#journal-edit-container .ile-category-button span.smbutton,
+	.smbutton.smbutton-blue.addToCart,
+	.smbutton.smbutton-lightgreen.smbutton-shadow.wish-button.addToWishlist,
+	#fakeButton,
+	.smbutton.smbutton-shadow.smbutton-lightgreen.promoCodeButton,
+	.smbutton.smbutton-size-large.smbutton-shadow.smbutton-lightgreen.dialog-cancel {
 
 		/*** BIG BUTTONS ***/
 		background-image: none !important;
 		border: none !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		color: #FFF !important;
 		font-family: "Roboto" !important;
 		font-size: 14pt !important;
@@ -255,6 +262,19 @@
 		font-stretch: condensed;
 	}
 
+	.info .title-wrap {
+
+		/*** THUMBS ***/
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		overflow: visible !important;
+	}
+
+	.info * {
+		font-stretch: condensed;
+		font-weight: normal !important;
+	}
+
 	.badge-stack,
 	body.gruze .forum_uplift_topic a.commentfaq,
 	.browse-container.newbrowse .browse-result-summary,
@@ -281,6 +301,7 @@
 	#comments i.gr2,
 	#comments i.gr3,
 	#comments-thread-settings,
+    .deepee-body .browse-bar,
 	#depths,
 	#deviantART-v7 #depths,
 	#deviant .gmbutton2 .icon,
@@ -295,7 +316,6 @@
 	.deviation-full-minipage .minipage-comments-disabled,
 	.minipage-left-divider,
 	.minipage-show-description.browse-proper-button,
-	.dev-metainfo-copy-control,
 	.dev-page-button.dev-page-download i,
 	.dev-page-view .dev-meta-actions .dev-page-button.remove-message-button i,
 	.dev-page-view .dev-view-meta hr.fade-highlight-bar,
@@ -306,7 +326,7 @@
 	.dev-page-view .dev-title-container a.report-deviation-link.top-report-link,
 	.dev-page-view .dev-view-meta .edit-buttons .delete-button i,
 	.dev-page-view .dev-view-meta .edit-buttons .edit-button i,
-	.dev-page-view .dev-meta-producttabs #print-button i,
+    #print-button i,
 	.dev-page-view .submit_to_groups_link i,
 	.dev-page-view .dev-meta-producttabs #buy-tabs.dev-page-button,
 	.dev-page-view .group_featured_list .user-symbol.group,
@@ -326,6 +346,7 @@
 	.forum_thread .forum_sidebar,
 	.forum_uplift_topic .topic_username,
 	#gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-top h2 img,
+    #gmi-HonkBoard,
 	.gmbutton2town.moarbuttons .gmbutton2.gmbutton2qn2r .icon,
 	.gr1,
 	.gr2,
@@ -350,20 +371,46 @@
 	.backroom .gr-headless i.gt2,
 	.backroom .gr-headless i.gt3,
 	.backroom .gr-headless i.gt3 i,
-	.gr-recent_polls,
 	.gr-top.gr-top-alone,
 	.gr-top .gr i,
 	.gruz-badgeholder.popup-unfriendly,
 	.grbubbletip.renamed,
+    .help,
+    .ile-feature-downloads-item-thumb,
 	i.tri,
 	.journal-module .more-journals-link,
 	.journal-module .journal-wrapper .journal-footer,
 	#group .gr-sidebarbox.gr-info,
 	#group .gruze-sidebar-end,
 	#group .more-journals-link,
-	.match-body-height > .guideblock:last-child:not(.shineblock),.mature-tag.followed-by-report-button,.mcbox-inner.mcbox-inner-thumb.mcbox-inner-thumb-deviation .mcb-commentcount,.messages-menu #birthday-zone,.module-blocks #gmi-GMFrame_Gruser:first-child .gr-box .grf-indent .text,#notes .current-note span.sel-arrow,#notes .mcb-note-box .note-controls,.notesfmessage.notesuccess .icon,#oh-menu-upgrade > a,#oh-menu-promo,.page-results #gmi-GPage #headerZone,.paging-results.paging-results-first-page.browse-link-button.popup-trigger,#pointsdownload_widget .dev-page-button i,.popup2-darkspeech,.search-box-clear.search-clear,.stash-create.stash-edit,.tab .icon,.user-symbol.beta,.user-symbol.premium,.user-symbol.senior,.user-symbol.super,.watch-suggestions-home.visible {
+    .ile-preview-mature-help,
+	.match-body-height > .guideblock:last-child:not(.shineblock),
+    .mature-tag.followed-by-report-button,
+    .mcbox-inner.mcbox-inner-thumb.mcbox-inner-thumb-deviation .mcb-commentcount,
+    .mc-hottopic-elnino-icon,
+    .messages-menu #birthday-zone,
+    .mi.iconset-upsell[href*="core-membership"],
+    .module-blocks #gmi-GMFrame_Gruser:first-child .gr-box .grf-indent .text,
+    #notes .current-note span.sel-arrow,#notes .mcb-note-box .note-controls,
+    .notesfmessage.notesuccess .icon,#oh-menu-upgrade > a,
+    #oh-menu-promo,
+    .page-results #gmi-GPage #headerZone,
+    .paging-results.paging-results-first-page.browse-link-button.popup-trigger,
+    #pointsdownload_widget .dev-page-button i,
+    .popup2-darkspeech,
+    .search-box-clear.search-clear,
+    .stash-create.stash-edit,
+    .tab .icon,.user-symbol.beta,
+    .show-modal,
+    .twitter-follow,
+    .user-symbol.group.nolink,
+    .user-symbol.premium,
+    .user-symbol.senior,
+    .user-symbol.super,
+    .watch-suggestions-home.visible {
 		display: none !important;
 	}
+
 
 	/* HEADER */
 
@@ -497,6 +544,14 @@
 		margin-top: -3px !important;
 	}
 
+	.deviantart #overhead-collect #oh-menu-cart .icon {
+
+		/*** HEADER MENU CART ICON ***/
+		background: no-repeat url("https://i.imgur.com/BlpsnyG.png") center !important;
+		background-size: 16px auto !important;
+		color: transparent;
+	}
+
 	.deviantart #overhead-collect .oh-hashover.oh-keep.oh-mc-split.iconset-more i.icon.i1 {
 
 		/*** HEADER MENU DEVIATION ICON ***/
@@ -528,7 +583,7 @@
 		background-size: 16px auto !important;
 		margin-top: -4px !important;
 	}
-    
+
 	.deviantart #oh-menu-split.splintered > a {
 		background: no-repeat url("https://i.imgur.com/OygFMxF.png") center !important;
 		background-size: 16px auto !important;
@@ -603,6 +658,10 @@
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 		line-height: 20pt !important;
+	}
+
+	.mi[href*="settings"] {
+		margin-top: -8px !important;
 	}
 
 	.friendmachine .controls {
@@ -868,19 +927,65 @@
 		font-weight: bold !important;
 	}
 
+	/* MODAL */
+
+	/** DESCRIPTION : change the elements of the modal windows **/
+	#modalspace {
+		background: var(--op-bg) !important;
+	}
+
+	div.modal.modal-rounded {
+		border: none !important;
+	}
+
+	div.modal.modal-rounded h1,
+	div.modal.modal-rounded h1 * {
+		color: var(--primary-color);
+		font-family: "Roboto" !important;
+		font-size: 18pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal;
+		letter-spacing: 0px;
+		text-shadow: none;
+	}
+
+	.deepee-body .deepee-searchcontainer {
+		background: transparent !important;
+		border: none !important;
+	}
+
+	.deepee-box div.stream div.tt-a * {
+		color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed;
+	}
+
+	.smbutton.smbutton-size-large.smbutton-shadow.smbutton-lightgreen.dialog-cancel {
+		background: #3E4651 !important;
+	}
+
 	/* LITTLE POPUP WINDOW */
 
-	/** DESCRIPTION : change the lements in the little popped up windows **/
+	/** DESCRIPTION : change the elements in the little popped up windows **/
 
 	.popup2-ccomment-manage,
 	.popup2-cruiser,
 	.popup2-feed-activity-menu .feed-activity-menu,
 	.popup2-givemenu,
-	.popup2-mczone-devwatch {
+	.popup2-mczone-devwatch,
+	.popup2-select_pager {
 		background: var(--card-bg) !important;
-		border: 1px solid var(--border-color) !important;
-		box-shadow: none !important;
-		padding: 10px !important;
+		border: none !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
+		padding: 5px 5px 8px 5px !important;
+	}
+
+	.popup2-mczone-devwatch {
+		height: 80px !important;
+	}
+
+	.popup2-mczone-devwatch div {
+		overflow: visible !important;
 	}
 
 	.popup.fade.slidedown.visible.animate {
@@ -932,7 +1037,8 @@
 	.popup2-cruiser .blockmenu a,
 	.popup2-feed-activity-menu .feed-activity-menu .feed-activity-menu-content a,
 	.popup2-givemenu .blockmenu a,
-	.popup2-mczone-devwatch .blockmenu a {
+	.popup2-mczone-devwatch .blockmenu a,
+	.popup2-select_pager * {
 		color: var(--primary-color) !important;
 		font-family: "Roboto" !important;
 		font-size: 14pt !important;
@@ -1032,7 +1138,7 @@
 	.gr-configbox label {
 		color: var(--secondary-color);
 		font-family: "Roboto" !important;
-		font-size: 18pt !important;
+		font-size: 16pt !important;
 		font-stretch: condensed;
 		font-weight: normal !important;
 	}
@@ -1099,9 +1205,9 @@
 		border: none !important;
 		border-radius: 2px;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
-		color: #FFF;
+		color: #FFF !important;
 		font-family: "Roboto";
-		font-size: 16pt !important;
+		font-size: 14pt !important;
 		font-stretch: condensed;
 		font-weight: bold;
 		padding: 8px 20px;
@@ -1110,6 +1216,40 @@
 
 	.deckuploader_container .deckuploader_buttons .deckuploader_button {
 		overflow: visible !important;
+	}
+
+	.gr-configbox.gr-gallery .gr-body {
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+	}
+
+	.gr-configbox.gr-gallery .modaltabs {
+		border: none !important;
+		font-size: 16pt !important;
+		font-stretch: condensed !important;
+	}
+
+	div.gr-configbox.gr-gallery .modaltabs a {
+		color: var(--primary-color) !important;
+	}
+
+	.gr-configbox.gr-gallery .modaltab-wrapper {
+		height: 410px !important;
+	}
+
+	.gr-configbox.gr-gallery .modaltab-wrapper * {
+		color: var(--primary-color) !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
+	.gr-configbox.gr-gallery .modaltab-wrapper input {
+		margin-top: 10px;
+		margin-bottom: 0px;
+	}
+
+	.gr-configbox.gr-gallery .buttonbar {
+		border: none !important;
+		margin-bottom: 20px;
 	}
 
 	/* CUSTOMIZE */
@@ -1214,11 +1354,10 @@
 	}
 
 	#deviant .inline-catalog-holder .indizone.modalfunk {
-		background: var(--card-bg) !important;
+		background: transparent !important;
 		border: none !important;
 		border-radius: 2px !important;
-		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		width: 97% !important;
+		width: 90% !important;
 		margin: 20px auto !important;
 	}
 
@@ -1339,9 +1478,10 @@
 	#gmi-Gruser #group .catbar .iconset-gruser li * {
 		color: var(--primary-color) !important;
 		font-family: "Roboto" !important;
-		font-size: 17pt !important;
+		font-size: 16pt !important;
 		font-stretch: condensed !important;
 		padding: 0px !important;
+		margin-top: -2px;
 		margin-right: 10px !important;
 	}
 
@@ -1382,20 +1522,27 @@
 		margin-left: -85px !important;
 	}
 
-	.gmbutton2town.moarbuttons .devwatch.gmbutton2.gmbutton2qn2r.green {
+	#master-editbutton {
+		background: #EB9532 !important;
+		color: #FFF !important;
+		padding: 5px 15px 7px 15px !important;
+	}
+
+	.gmbutton2town.moarbuttons .devwatch.gmbutton2.gmbutton2qn2r.green,
+	.devwatch.gmbutton2.gmbutton2qn2r {
 		background: #62C462 !important;
-		padding: 5px 15px !important;
+		padding: 5px 15px 7px 15px !important;
 	}
 
 	.gmbutton2town.moarbuttons #send-a-note {
 		background: #1DABB8 !important;
-		padding: 5px 15px !important;
+		padding: 5px 15px 7px 15px !important;
 	}
 
-	.gmbutton2town.moarbuttons .gmbutton2.gmbutton2qn2r {
-		background: #EB9532 !important;
+	.gmbutton2town.moarbuttons .gmbutton2.gmbutton2qn2r[href*="give"] {
+		background: #3E4651 !important;
 		color: #FFF !important;
-		padding: 5px 15px !important;
+		padding: 5px 15px 7px 15px !important;
 	}
 
 	.gmbutton2town.moarbuttons .gmbutton2.gmbutton2qn2r img,
@@ -1563,7 +1710,7 @@
 	.mods-column-rr .gr-top .gr * {
 		color: var(--primary-color);
 		font-family: "Roboto" !important;
-		font-size: 20pt;
+		font-size: 18pt;
 		font-stretch: condensed !important;
 	}
 
@@ -1571,7 +1718,7 @@
 	#gmi-Gruser #group #gruze-columns .gr-box.gr-membox .gr-top .gr h2 {
 		color: var(--primary-color) !important;
 		font-family: "Roboto" !important;
-		font-size: 20pt !important;
+		font-size: 18pt !important;
 		font-stretch: condensed !important;
 	}
 
@@ -1583,7 +1730,7 @@
 	}
 
 	.gm-chaos.gm-chaos-edit.gmbuttons {
-		margin-top: 24px !important;
+		margin-top: 21px !important;
 		margin-right: 20px !important;
 	}
 
@@ -1596,6 +1743,12 @@
 		background-size: cover !important;
 		height: 19px !important;
 		width: 0px !important;
+	}
+
+	.ccomment .cc-manage-button.gm-chaos.gmbuttons a {
+		color: transparent !important;
+		position: absolute !important;
+		margin-top: -2px !important;
 	}
 
 	#ile-container .ile-section-preview .ile_mod-files.ile-files {
@@ -1630,7 +1783,7 @@
 	#gmi-Gruser #deviant #gruze-columns .gr-grouplistbox .gr-body .gr,
 	#gmi-Gruser #group #gruze-columns .gr-box.gr-membox .gr-body .gr {
 		border: none !important;
-		padding: 15px !important;
+		padding: 10px !important;
 	}
 
 	#gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-body .gr .torpedo-container .thumb.with-state-msg {
@@ -1660,6 +1813,7 @@
 		font-size: 17pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
+		padding-bottom: 6px;
 	}
 
 	#group .filter.selected {
@@ -1752,7 +1906,7 @@
 	#gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-body .gr .smbutton.smbutton-pale,
 	#gmi-Gruser #deviant #gruze-columns .gr-grouplistbox .gr-body .gr .smbutton.smbutton-pale {
 		background: #3E4651 !important;
-		padding: 5px 10px !important;
+		padding: 5px 10px 7px 10px !important;
 	}
 
 	.hyperbuttons * {
@@ -1763,8 +1917,9 @@
 
 	#gmi-Gruser #deviant #gruze-columns .gr-box.gr-genericbox .gr-body .gr .smbutton.smbutton-wide {
 		background: #00587A !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		font-size: 14pt !important;
-		padding: 5px !important;
+		padding: 3px 3px 5px 3px !important;
 	}
 
 	.commentcount * {
@@ -1955,7 +2110,7 @@
 	.feed-action-content.allow-overflow {
 		border-top: 1px dotted var(--border-color) !important;
 	}
-    
+
 	.feed-action-content.allow-overflow .journal {
 		box-shadow: none !important;
 	}
@@ -2087,6 +2242,88 @@
 
 	.smbutton.smbutton-red.donate {
 		background: #EB6361 !important;
+	}
+
+	.timeline-Body {
+
+		/*** PROFILE CONTAINER TWEETER BOX ***/
+		border: none;
+		border-radius: 2px;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+	}
+
+	.timeline-TweetList-tweet:first-of-type {
+		border-top: none !important;
+	}
+
+	.timeline-TweetList .timeline-TweetList-tweet {
+		border-top: 1px dotted var(--border-color);
+	}
+
+	.timeline-TweetList * {
+		color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+	}
+
+	.f.shouts * {
+
+		/*** PROFILE CONTAINER SHOUT BOX ***/
+		color: var(--primary-color);
+		font-family: "Roboto" !important;
+		font-size: 14pt;
+		font-stretch: condensed !important;
+	}
+
+	.f.shouts .f {
+		margin-top: 10px !important;
+	}
+
+	.f.shouts .f .avatar {
+		border-radius: 50% !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
+		margin-top: 4px !important;
+	}
+
+	.f.shouts .f .username {
+		margin-left: 10px !important;
+	}
+
+	.f.shouts .f .timestamp {
+		color: var(--secondary-color) !important;
+	}
+
+	.f.shouts .f .altview.h.p {
+		background: transparent !important;
+	}
+
+	.f.shouts .f input {
+		background: var(--card-bg-2);
+		border: none;
+		border-radius: 2px;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
+		color: var(--primary-color);
+		font-size: 14pt;
+		font-stretch: condensed;
+	}
+
+	input[value="Shout!"] {
+		background: #5FAC75 !important;
+		border: none !important;
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		font-weight: bold !important;
+		padding: 8px 20px 9px 20px !important;
+		text-transform: uppercase !important;
+		margin-top: 10px;
+	}
+
+	.f.editing.ccexpanded {
+
+		/*** PROFILE CONTAINER EDIT ***/
+		box-shadow: none !important;
+		padding-top: 15px !important;
 	}
 
 	/* GROUP */
@@ -2375,20 +2612,27 @@
 	/* GALLERY */
 
 	/** DESCRIPTION : change the elements of the gallery page **/
-	#gmi-GalleryEditor #gruze-main .zones-container,
-	.feed-prototype .feed-container {
+	#gmi-GalleryEditor #gruze-main .zones-container {
 
 		/*** GALLERY FOLDER CONTAINER ***/
 		margin-top: 110px !important;
+	}
+
+	.feed-prototype .feed-container {
+		margin-top: 80px !important;
 	}
 
 	#group #gmi-GalleryEditor #gruze-main .zones-container {
 		margin-top: 20px !important;
 	}
 
-	#deviant .gallery-topbar #browse-search-box {
+	#deviant .gallery-topbar {
 
 		/*** GALLERY FOLDER SEARCHBOX ***/
+		overflow: visible;
+	}
+
+	#deviant .gallery-topbar #browse-search-box {
 		position: absolute !important;
 		top: -82px !important;
 		left: -180px !important;
@@ -2427,6 +2671,16 @@
 		text-shadow: none !important;
 		text-transform: uppercase !important;
 		margin-left: 10px !important;
+	}
+
+	#browse-gallery-sort-box select {
+		background: var(--card-bg) !important;
+		border: none !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .3) !important;
+		color: var(--primary-color);
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		padding: 6px 12px !important;
 	}
 
 	.group-gallery-edit-controls,
@@ -2556,6 +2810,7 @@
 		padding: 8px 15px 8px 8px !important;
 		text-shadow: none !important;
 		text-transform: uppercase !important;
+		z-index: 99 !important;
 	}
 
 	#deviant .options-button-container .collectionwatch {
@@ -2632,6 +2887,11 @@
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		color: #FFF !important;
+		padding-bottom: 7px;
+	}
+
+	ul.menu_holder li > a.active {
+		padding-bottom: 15px !important;
 	}
 
 	.gallery-categories.browse-facet a.selected:hover,
@@ -3250,9 +3510,9 @@
 		/*** DEVIATION WATCH BUTTON ***/   
 		background: #62C462 !important;
 		border: none !important;
-		border-radius: 1px !important;
+		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-		padding: 6px 15px !important;
+		padding: 6px 15px 8px 15px !important;
 		text-shadow: none !important;
 		margin-top: 42px !important;
 		margin-right: 8px !important;
@@ -3292,9 +3552,15 @@
 	.dev-page-view .dev-description .text.block * {
 		color: var(--primary-color);
 		font-family: "Roboto", "ぼくたちのゴシック２ボールド" !important;
-		font-size: 15pt !important;
+		font-size: 14pt;
 		font-stretch: condensed;
 		letter-spacing: 0px !important;
+	}
+
+	.dev-page-view .dev-description .text.block h1,
+	.dev-page-view .dev-description .text.block h2,
+	.dev-page-view .dev-description .text.block h3 {
+		font-size: 17pt !important;
 	}
 
 	.dd-container .gr-body {
@@ -3650,7 +3916,7 @@
 
 		/*** DEVIATION COMMENT POST META DATA ***/
 		border-bottom: 1px dotted var(--border-color) !important;
-		padding: 10px 15px 15px 15px !important;
+		padding: 10px 15px 12px 15px !important;
 		margin: -20px -20px 20px -20px !important;
 	}
 
@@ -3663,7 +3929,7 @@
 	#group .user-description .username {
 
 		/*** DEVIATION COMMENT POSTS META DATA AUTHOR ***/
-		font-size: 18pt !important;
+		font-size: 16pt !important;
 		font-stretch: condensed;
 		font-weight: normal;
 		letter-spacing: 0px !important;
@@ -3687,7 +3953,7 @@
 
 		/*** DEVIATION COMMENT POSTS META DATA TIME ***/
 		color: var(--primary-color) !important;
-		font-size: 18pt !important;
+		font-size: 16pt !important;
 		font-stretch: condensed;
 		font-weight: normal;
 		text-transform: lowercase !important;
@@ -3702,7 +3968,7 @@
 
 		/*** DEVIATION COMMENT POSTS META DATA TIME ***/
 		color: var(--secondary-color) !important;
-		font-size: 18pt !important;
+		font-size: 16pt !important;
 		font-stretch: condensed;
 		font-weight: normal;
 		text-transform: lowercase !important;
@@ -3895,6 +4161,120 @@
 		margin-top: 4px !important;
 	}
 
+	#printtabscontainer {
+		background: var(--card-bg) !important;
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+	}
+
+	#print-button,
+	.product-tab-all-container {
+		background: var(--card-bg) !important;
+		border: none !important;
+		border-top-left-radius: 2px !important;
+		border-top-right-radius: 2px !important;
+		box-shadow: none !important;
+		color: var(--primary-color) !important;
+		font-family: "Roboto" !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		text-indent: 15px;
+		text-shadow: none !important;
+	}
+
+	#print-button .close {
+		font-size: 14pt !important;
+	}
+
+	#buy-tabs {
+		background: transparent !important;
+		border: none !important;
+		box-shadow: none !important;
+	}
+
+	#buy-tabs .tab {
+		background: var(--card-bg) !important;
+		border: none !important;
+		box-shadow: none !important;
+		color: var(--primary-color) !important;
+		font-family: "Roboto" !important;
+		font-size: 12pt !important;
+		font-stretch: condensed !important;
+		text-shadow: none !important;
+	}
+
+	.product-tab-active {
+		opacity: .6 !important;
+	}
+
+	.product-tab-all-container * {
+		font-size: 14pt;
+	}
+
+	.product-tab-select-root .label {
+		width: 100% !important;
+		text-align: left !important;
+	}
+
+	.select_pager {
+		background: var(--card-bg-2) !important;
+		border-radius: 2px !important;
+		padding-bottom: 8px;
+		text-indent: 0px !important;
+		margin-top: 10px;
+	}
+
+	.select_pager * {
+		color: var(--primary-color) !important;
+		font-family: "Roboto" !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
+	.select_pager .button {
+		background: no-repeat url("https://i.imgur.com/OygFMxF.png") center !important;
+		background-size: 15px auto !important;
+		filter: var(--invert) !important;
+		margin-top: 4px;
+	}
+
+	div.product-tab-select-root {
+		border-bottom: 1px dotted var(--border-color);
+	}
+
+	div.product-tab-content div.total {
+		border-color: transparent;
+	}
+
+	.price * {
+		font-stretch: condensed !important;
+	}
+
+	.product-tab-currency-container * {
+		color: var(--secondary-color) !important;
+	}
+
+	.smbutton.smbutton-blue.addToCart span,
+	.smbutton.smbutton-lightgreen.smbutton-shadow.wish-button.addToWishlist span {
+		border: none !important;
+		border-radius: 2px !important;
+		font-size: 14pt !important;
+	}
+
+	.smbutton.smbutton-blue.addToCart span {
+		background: #00587A !important;
+	}
+
+	.smbutton.smbutton-lightgreen.smbutton-shadow.wish-button.addToWishlist span {
+		background: #EB9532 !important;
+	}
+
+	.smbutton.smbutton-blue.addToCart *,
+	.smbutton.smbutton-lightgreen.smbutton-shadow.wish-button.addToWishlist * {
+		color: #FFF !important;
+		font-size: 14pt !important;
+	}
+
 	.dev-page-view .deviation-mlt-preview.deviation-mlt-preview-b,
 	.group_featured_list.details-section {
 
@@ -3912,6 +4292,21 @@
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		padding: 10px 5px !important;
 		margin-top: -5px !important;
+	}
+
+	.dev-metainfo-copy-control {
+		margin-left: 16px;
+	}
+
+	.dev-metainfo-copy-control:last-child {
+		padding-bottom: 15px;
+	}
+
+	.dev-metainfo-copy-control input {
+		background: var(--card-bg-2) !important;
+		border: none !important;
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 	}
 
 	.dev-page-view .deviation-mlt-preview.deviation-mlt-preview-b .dev-right-bar-title,
@@ -3980,7 +4375,8 @@
 	}
 
 	.dev-right-bar-content.dev-metainfo-content.dev-metainfo-details *,
-	.dev-right-bar-content.dev-metainfo-content.dev-metainfo-stats * {
+	.dev-right-bar-content.dev-metainfo-content.dev-metainfo-stats *,
+	.dev-right-bar-content.dev-metainfo-content.dev-metainfo-camera * {
 
 		/*** DEVIATION SIDEBAR CONTAINER CONTENT ***/
 		color: var(--secondary-color) !important;
@@ -4110,7 +4506,7 @@
 	#browse2 #catBar * {
 		color: var(--secondary-color) !important;
 		font-family: "Roboto" !important;
-		font-size: 20pt !important;
+		font-size: 18pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 		letter-spacing: 0px !important;
@@ -4250,6 +4646,7 @@
 		background: #62C462 !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		padding-bottom: 7px !important;
 	}
 
 	#browse-sidemenu a:not(.selected):hover {
@@ -4516,7 +4913,7 @@
 		/*** WATCH DATE TIMELINE ***/
 		color: #00587A;
 		font-family: "Roboto";
-		font-size: 25pt !important;
+		font-size: 20pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 		letter-spacing: 0px !important;
@@ -4595,7 +4992,7 @@
 		/*** NOTIFICATIONS MAIN CONTENT ***/
 		width: 90% !important;
 		padding-bottom: 0px !important;
-		margin: 80px auto !important;
+		margin: 40px auto !important;
 	}
 
 	div.mczone {
@@ -4622,11 +5019,12 @@
 		border-top-left-radius: 2px !important;
 		color: var(--primary-color) !important;
 		font-family: "Roboto" !important;
-		font-size: 18pt !important;
+		font-size: 16pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 		letter-spacing: .1px !important;
-		padding: 15px 25px !important;
+		height: 50px;
+		line-height: 47px;
 		text-transform: lowercase !important;
 	}
 
@@ -4645,7 +5043,8 @@
 		margin-top: 10px;
 	}
 
-	div.mczone div.mczone-empty {
+	div.mczone div.mczone-empty,
+	.pppp.c {
 		color: var(--primary-color) !important;
 		font-size: 15pt;
 		font-stretch: condensed !important;
@@ -4700,26 +5099,35 @@
 		font-family: "Roboto" !important;
 		margin: 2px 8px;
 	}
-    
-    .vote-float * {
-        font-size: 14pt !important;
-        font-stretch: condensed !important;
-    }
-    
-    .vote-float .icons i {
-        margin-top: 6px !important;
-        margin-left: -4px !important;
+
+	div.mcb-tab .print .tabtext {
+		background: #0F595E !important;
+		color: #FFF !important;
+		font-family: "Roboto" !important;
+		font-stretch: condensed !important;
+		font-size: 12pt !important;
+		padding-bottom: 8px !important;
 	}
-    
-    .gmbutton2.gmhuge.gmvoteyes {
-        background: no-repeat url("https://i.imgur.com/MXLCI2Q.png") center !important;
-        background-size: cover !important;
-    }
-    
-    .gmbutton2.gmhuge.gmvoteno {
-        background: no-repeat url("https://i.imgur.com/h7v8SWh.png") center !important; 
-        background-size: cover !important;
-    }
+
+	.vote-float * {
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+	}
+
+	.vote-float .icons i {
+		margin-top: 6px !important;
+		margin-left: -4px !important;
+	}
+
+	.gmbutton2.gmhuge.gmvoteyes {
+		background: no-repeat url("https://i.imgur.com/MXLCI2Q.png") center !important;
+		background-size: cover !important;
+	}
+
+	.gmbutton2.gmhuge.gmvoteno {
+		background: no-repeat url("https://i.imgur.com/h7v8SWh.png") center !important;
+		background-size: cover !important;
+	}
 
 	div.mcb-tab .stacklink-cover .tabtext {
 
@@ -4799,7 +5207,7 @@
 	.r.page.nextlink {
 		background: none !important;
 		border: none !important;
-		border-radius: 2px;
+		border-radius: 2px !important;
 		box-shadow: none !important;
 		text-shadow: none !important;
 		color: #FFF !important;
@@ -4852,7 +5260,7 @@
 	}
 
 	.gmbutton.viewbutton {
-		background-color: #44B39D !important;
+		background-color: #5FAC75 !important;
 		margin-left: 13px !important;
 	}
 
@@ -4893,8 +5301,8 @@
 
 		/*** DISPLAY ICONS ***/
 		position: absolute;
-		top: 18px;
-		right: 90px;
+		top: 8px;
+		right: 80px;
 	}
 
 	body.mc-stacks div.mczone h2.mczone-title div.mcviews div.dvl {
@@ -4939,9 +5347,13 @@
 		margin-left: 50px !important;
 	}
 
-	div.mczone-filter div.active {
+	div.mczone-filter {
 
 		/*** SORT BUTTON ***/
+		top: 5px;
+	}
+
+	div.mczone-filter div.active {
 		background: #7E7E7E !important;
 		border-radius: 2px !important;
 		color: #FFF !important;
@@ -4958,7 +5370,7 @@
 		background: transparent !important;
 		color: var(--primary-color);
 		font-family: "Roboto" !important;
-		font-size: 18pt !important;
+		font-size: 16pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 		padding: 4px 8px 4px 8px !important;
@@ -5083,7 +5495,7 @@
 		font-stretch: condensed !important;
 		font-size: 15pt !important;
 		font-weight: normal !important;
-		height: 22px !important;
+		height: 23px !important;
 		max-width: 60% !important;
 		overflow: hidden !important;
 		text-overflow: ellipsis !important;
@@ -5290,7 +5702,8 @@
 		font-stretch: condensed !important;
 	}
 
-	.mcbox-inner.mcbox-inner-list * {
+	.mcbox-inner.mcbox-inner-list *,
+	.mc-hottopic-elnino-body * {
 		font-size: 14pt !important;
 		font-stretch: condensed !important;
 		font-weight: normal !important;
@@ -5337,7 +5750,7 @@
 	}
 
 	input[value="Vote"] {
-		background: #47B39D !important;
+		background: #5FAC75 !important;
 		border: none !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
@@ -5354,6 +5767,21 @@
 
 	.votearea.votearea-notvoted .avatar {
 		display: none !important;
+	}
+
+	.gr-recent_polls .grf-indent * {
+		color: var(--primary-color);
+		font-size: 14pt;
+		font-stretch: condensed;
+	}
+
+	.gr-recent_polls .grf-indent .list .f {
+		border-bottom: 1px dotted var(--border-color);
+		padding: 15px 20px 20px 20px !important;
+	}
+
+	.gr-recent_polls .grf-indent .list .a {
+		background: transparent !important;
 	}
 
 	/* NOTES */
@@ -5709,7 +6137,7 @@
 		border: none !important;
 		height: auto !important;
 		width: 180px;
-		margin-top: 80px !important;
+		margin-top: 33px !important;
 		padding-top: 30px !important;
 		padding-bottom: 400% !important;
 		padding-left: 30px !important;
@@ -5880,7 +6308,7 @@
 		font-size: 15pt;
 		font-stretch: condensed !important;
 		font-weight: normal;
-        margin-top: 20px !important;
+		margin-top: 20px !important;
 		margin-bottom: 15px !important;
 	}
 
@@ -5987,8 +6415,8 @@
 		font-weight: normal !important;
 		letter-spacing: 0px !important;
 	}
-    
- 	.grf-indent.ppp.critmod .gr-box .gr-body  {
+
+	.grf-indent.ppp.critmod .gr-box .gr-body {
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .1) !important;
 	}
 
@@ -6107,7 +6535,6 @@
 		font-family: "Roboto" !important;
 		font-size: 16pt !important;
 		font-stretch: condensed !important;
-		font-weight: normal !important;
 		margin-bottom: 3px !important;
 		letter-spacing: 0px !important;
 		text-align: left !important;
@@ -6168,7 +6595,6 @@
 		font-family: "Roboto" !important;
 		font-size: 16pt !important;
 		font-stretch: condensed !important;
-		font-weight: normal !important;
 		text-transform: uppercase !important;
 	}
 
@@ -6187,7 +6613,7 @@
 
 		/*** FORUM THREAD CONTENT ***/
 		margin-right: 50px !important;
-		margin-top: 155px !important;
+		margin-top: 130px;
 		margin-left: 50px !important;
 	}
 
@@ -6438,7 +6864,7 @@
 
 	#makeGroupButton,
 	#makeGroupButton:hover {
-		background: #FEC606 !important;
+		background: #EB9532 !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		color: #FFF !important;
@@ -6447,8 +6873,8 @@
 		font-stretch: condensed !important;
 		font-weight: bold !important;
 		text-transform: uppercase;
-		padding: 5px 25px 5px 10px !important;
-		margin-top: 8px !important;
+		padding: 5px 25px 7px 10px !important;
+		margin-top: 15px !important;
 	}
 
 	.browse-container.browse-container-groups.match-body-height {
@@ -6590,7 +7016,7 @@
 		text-shadow: none !important;
 	}
 
-	.ile-resize-button.smbutton.smbutton-white.smbutton-stash-white,
+	.ile-preview-right .ile-resize-button.smbutton.smbutton-white.smbutton-stash-white,
 	#ile-container .ile-mature .ile-preview-option {
 		background: var(--card-bg-2) !important;
 		border: none !important;
@@ -6599,6 +7025,10 @@
 
 	.ile-resize-button.smbutton.smbutton-white.smbutton-stash-white span {
 		border: none !important;
+	}
+
+	.ile-watermark {
+		margin-top: 8px !important;
 	}
 
 	.stash-upload-box .modal-links {
@@ -6700,6 +7130,10 @@
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 	}
 
+	.editmode div#ile-contents #modal-form-category a.hyper {
+		font-size: 14pt;
+	}
+
 	#modal-form-category div.pager-light,
 	#modal-form-category div.pager-light div.pager2,
 	#modal-form-category div.pager-light div.page2,
@@ -6760,12 +7194,12 @@
 	div.inline-category-picker #modal-form-category input.isearch {
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 	}
-    
-    .inline-category-picker #modal-form-category div.pager-panes {
-        border: none !important;
-        border-radius: 2px !important;
-        box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
-    }
+
+	.inline-category-picker #modal-form-category div.pager-panes {
+		border: none !important;
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+	}
 
 	#ile-contents .ile-tags .tags-widget {
 		padding: 10px !important;
@@ -6778,6 +7212,7 @@
 	#ile-container .ile-section-options a.ile-options-button {
 
 		/*** SUBMIT PUBLICATION OPTIONS ***/
+		background: var(--card-bg);
 		border-radius: 1px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		margin-left: -4px !important;
@@ -6786,7 +7221,7 @@
 	.ile-gallery-groups-button,
 	.ile-options-publish-button,
 	#ile-contents .ile_mod .smbutton.smbutton-white.smbutton-stash-white {
-		background: var(--card-bg) !important;
+		background: var(--card-bg);
 		border: none !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
@@ -6865,7 +7300,7 @@
 	}
 
 	#ile-container .ile-feature {
-		background: var(--card-bg-2) !important;
+		background: var(--card-bg) !important;
 		border: none !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
@@ -6886,6 +7321,10 @@
 		font-stretch: condensed;
 	}
 
+	.ile-feature.ile-feature-downloads {
+		margin-top: 8px !important;
+	}
+
 	.ile-feature-downloads-items {
 		background: transparent !important;
 		border: none !important;
@@ -6903,6 +7342,28 @@
 	/* SHOP */
 
 	/** DESCRIPTION : change the elements of the shop page **/
+	.subjectsBox {
+		background: var(--card-bg) !important;
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		margin-top: 50px !important;
+		margin-left: 25px !important;
+		margin-right: 100px !important;
+	}
+
+	.subjectsBox * {
+		color: var(--primary-color) !important;
+		font-family: "Roboto" !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: normal !important;
+		letter-spacing: 0px !important;
+	}
+
+	.subjectsBox .title {
+		font-size: 18pt !important;
+	}
+
 	.tt-a.shop-tt .tt-fh-oe {
 		color: var(--primary-color) !important;
 		font-size: 17pt !important;
@@ -6913,7 +7374,8 @@
 		margin-bottom: -5px !important;
 	}
 
-	.tt-a.shop-tt .details small {
+	.tt-a.shop-tt .details small,
+	.stream .tt-fh-oe {
 		color: var(--secondary-color) !important;
 		font-family: "Roboto" !important;
 		font-size: 14pt !important;
@@ -6933,6 +7395,94 @@
 		color: var(--primary-color) !important;
 		font-size: 15pt !important;
 		font-stretch: condensed !important;
+	}
+
+	.print-rockit100 {
+		background: #EB9532 !important;
+		border-radius: 2px;
+		color: var(--primary-color) !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		padding: 8px 6px;
+		text-indent: 0px !important;
+		text-transform: uppercase !important;
+	}
+
+	/* SHOPPING CART */
+
+	/** DESCRIPTION : change the elements of the shopiing cart page **/
+	#submit h1,
+	#submit h1 * {
+		color: var(--primary-color) !important;
+		font-family: "Roboto" !important;
+		font-size: 20pt !important;
+		font-stretch: condensed !important;
+		letter-spacing: 0px !important;
+		font-weight: normal !important;
+		margin-top: -40px !important;
+	}
+
+	.altview.h.ch.collapsible,
+	.altview_right.h.ch.PromotionBubble,
+	.altview_right.h.ch.AssuranceBubble {
+		background: var(--card-bg) !important;
+		border: none !important;
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+	}
+
+	.altview.h.ch.collapsible *,
+	.altview_right.h.ch.PromotionBubble *,
+	.altview_right.h.ch.AssuranceBubble *,
+	.deviously-delighted {
+		color: var(--primary-color) !important;
+		font-family: "Roboto" !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		letter-spacing: 0px !important;
+	}
+
+	#submit #topPriceTable,
+	table.itemListTable thead tr th {
+		border-bottom: 1px dotted var(--border-color) !important;
+	}
+
+	#fakeButton,
+	.smbutton.smbutton-shadow.smbutton-lightgreen.promoCodeButton {
+		background: #0F595E !important;
+	}
+
+	.altview.h.ch.collapsible .quantityInput,
+	.altview_right.h.ch.PromotionBubble .promoCodeInput {
+		background: var(--card-bg-2) !important;
+		border: none !important;
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+	}
+
+	#CreditCardTab,
+	#PayPalTab,
+	#PointsTab,
+	#PaymentMethodTabs .leftPart,
+	#PaymentMethodTabs .rightPart {
+		background: transparent !important;
+	}
+
+	#CreditCardTab input,
+	#CreditCardTab select {
+		background: var(--card-bg-2) !important;
+		border: none !important;
+		border-radius: 2px !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+	}
+
+	#PaymentMethodTabs {
+		border: none !important;
+	}
+
+	div#PaymentMethodTabs div.PaymentTab {
+		background: transparent !important;
 	}
 
 	/* SETTINGS */
@@ -6957,6 +7507,8 @@
 		/*** SETTINGS MAIN CONTENT ***/
 		background: transparent !important;
 		padding-left: 40px !important;
+		position: relative !important;
+		top: -70px;
 	}
 
 	div.fooview {
@@ -6993,7 +7545,7 @@
 		font-stretch: condensed !important;
 		font-weight: normal !important;
 		letter-spacing: 0px !important;
-		padding: 10px 15px 15px 15px !important;
+		padding: 10px 15px 15px 20px !important;
 		margin-left: -20px !important;
 		margin-right: -20px !important;
 		margin-top: -20px !important;
@@ -7027,10 +7579,10 @@
 
 	.l .smbutton,
 	.fooview .smbutton.smbutton-pale {
-		background: #8199A3 !important;
+		background: #0F595E !important;
 		border: none !important;
 		border-radius: 2px !important;
-		box-shadow: none !important;
+		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
 		color: #FFF !important;
 		font-family: "Roboto" !important;
 		font-size: 14pt !important;
@@ -7050,6 +7602,19 @@
 		border: none !important;
 		border-radius: 2px !important;
 		box-shadow: 0px 1px 2px rgba(0, 0, 0, .2) !important;
+		color: #FFF !important;
+		font-family: "Roboto" !important;
+		font-size: 14pt !important;
+		font-stretch: condensed !important;
+		font-weight: bold !important;
+		text-transform: uppercase !important;
+		text-shadow: none !important;
+	}
+
+	.load_more .smbutton.smbutton-green {
+		height: 20px !important;
+		line-height: 18px !important;
+		width: 100px;
 	}
 
 	.smbutton.smbutton-green span {
@@ -7088,6 +7653,11 @@
 
 	.settings_sessions .settings-sessions-table tr {
 		background: #FFF !important;
+	}
+
+	.settings_sessions .settings-sessions-table-cont,
+	.settings_sessions .settings-sessions-table tr {
+		background: transparent !important;
 	}
 
 	.menu_holder {
@@ -7246,13 +7816,10 @@
 	}
 
 }
+
 @-moz-document regexp("https://.*.deviantart.com/aboutus/") {
 	#group .gruze-sidebar {
 		display: none !important;
 	}
 
 }
-
-   
-
-   
