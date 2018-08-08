@@ -7,7 +7,7 @@ Preview of <i>Atmosphere-O</i>.
 About
 -------------------------------
 
-<i>Atmosphere-O</i> is an user style for </i>Deviantart</i>.
+<i>Atmosphere-O</i> is an user style for <i>DeviantArt</i>.
 
 User styles are CSS code designed to alter the appearance of one, some, or all sites.
 
