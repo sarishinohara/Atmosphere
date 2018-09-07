@@ -7,7 +7,7 @@ Preview of <i>Atmosphere</i>.
 About
 -------------------------------
 
-<i>Atmosphere</i> is an user style for <i>DeviantArt</i>.
+<i>Atmosphere</i> is a user style for <i>DeviantArt</i>.
 
 User styles are CSS code designed to alter the appearance of one, some, or all sites.
 
